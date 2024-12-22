@@ -1,0 +1,50 @@
+---
+title: "Application d'analyse du sol"
+description: "Une application innovante pour analyser et comprendre la composition des sols grâce au Machine Learning"
+author: "Davick MOUNTEKA"
+format: html
+from: markdown+emoji
+---
+
+## Présentation du projet
+
+- Problématique: La surexploitation du sol posé par le fait que la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité.
+- Solution proposée : Grâce à IAGRIKOL, il est possible d'analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements.
+- Avantage clé : Facilité d'utilisation, rapidité, et précision grâce à des algorithmes avancés de machine learning.
+- [Découvrir le projet](doc/context1.qmd)
+- [Tester l'application](doc/application2.qmd)
+
+### Aspect visuel
+
+Les élèves de deuxième année de l'ENSAI participent à la réalisation du projet informatique par groupes de 4 ou 5 élèves. 
+
+Ce projet permet d’effectuer un approfondissement et une mise en pratique des connaissances acquises lors des enseignements informatiques de 1ère année.
+
+Le travail demandé consiste à [construire une application]{.underline} permettant de répondre à la problématique d'un sujet proposé. Ce travail se décompose en 2 grandes phases : 
+
+1. Étude préalable et Conception générale de l'application
+  - décrire la solution envisagée
+  - planifier les grandes phases de la réalisation
+  - décrire les exigences fonctionnelles par la modélisation
+2. Réalisation
+  - mise en place de la base de données
+  - développements, tests, documentation
+
+
+## Equipe de conception
+
+Ce projet a été développé par une équipe de passionés:
+- KOKOLO Reine Vertu
+- LOUSSINGUI BALENGUISSA Merveille
+- MOUNTEKA NDONDON Davick
+
+::: {.callout-note}
+Ce projet est à l'initiative de la gent féminine, organisé dans le cadre de la **journée de la fille scientifique** [Voir plus](doc/context2.qmd)
+:::
+
+
+
+## Bibliographie
+
+- [Mise en production des projets de data science](https://ensae-reproductibilite.github.io/website/){target="_blank"}, Romain Avouac & Lino Galiana (ENSAE)
+- [Refactoring.Guru](https://refactoring.guru/fr){target="_blank"}
