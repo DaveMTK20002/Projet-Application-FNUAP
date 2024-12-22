@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Application d’analyse du sol",
+    "section": "",
+    "text": "Problématique: La surexploitation du sol posé par le fait que la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité.\nSolution proposée : Grâce à IAGRIKOL, il est possible d’analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements.\nAvantage clé : Facilité d’utilisation, rapidité, et précision grâce à des algorithmes avancés de machine learning.\nDécouvrir le projet\nTester l’application\n\n\n\nLes élèves de deuxième année de l’ENSAI participent à la réalisation du projet informatique par groupes de 4 ou 5 élèves.\nCe projet permet d’effectuer un approfondissement et une mise en pratique des connaissances acquises lors des enseignements informatiques de 1ère année.\nLe travail demandé consiste à construire une application permettant de répondre à la problématique d’un sujet proposé. Ce travail se décompose en 2 grandes phases :\n\nÉtude préalable et Conception générale de l’application\n\n\ndécrire la solution envisagée\nplanifier les grandes phases de la réalisation\ndécrire les exigences fonctionnelles par la modélisation\n\n\nRéalisation\n\n\nmise en place de la base de données\ndéveloppements, tests, documentation"
+  },
+  {
+    "objectID": "index.html#présentation-du-projet",
+    "href": "index.html#présentation-du-projet",
+    "title": "Application d’analyse du sol",
+    "section": "",
+    "text": "Problématique: La surexploitation du sol posé par le fait que la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité.\nSolution proposée : Grâce à IAGRIKOL, il est possible d’analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements.\nAvantage clé : Facilité d’utilisation, rapidité, et précision grâce à des algorithmes avancés de machine learning.\nDécouvrir le projet\nTester l’application\n\n\n\nLes élèves de deuxième année de l’ENSAI participent à la réalisation du projet informatique par groupes de 4 ou 5 élèves.\nCe projet permet d’effectuer un approfondissement et une mise en pratique des connaissances acquises lors des enseignements informatiques de 1ère année.\nLe travail demandé consiste à construire une application permettant de répondre à la problématique d’un sujet proposé. Ce travail se décompose en 2 grandes phases :\n\nÉtude préalable et Conception générale de l’application\n\n\ndécrire la solution envisagée\nplanifier les grandes phases de la réalisation\ndécrire les exigences fonctionnelles par la modélisation\n\n\nRéalisation\n\n\nmise en place de la base de données\ndéveloppements, tests, documentation"
+  },
+  {
+    "objectID": "index.html#equipe-de-conception",
+    "href": "index.html#equipe-de-conception",
+    "title": "Application d’analyse du sol",
+    "section": "Equipe de conception",
+    "text": "Equipe de conception\nCe projet a été développé par une équipe de passionés: - KOKOLO Reine Vertu - LOUSSINGUI BALENGUISSA Merveille - MOUNTEKA NDONDON Davick\n\n\n\n\n\n\nNote\n\n\n\nCe projet est à l’initiative de la gent féminine, organisé dans le cadre de la journée de la fille scientifique Voir plus"
+  },
+  {
+    "objectID": "index.html#bibliographie",
+    "href": "index.html#bibliographie",
+    "title": "Application d’analyse du sol",
+    "section": "Bibliographie",
+    "text": "Bibliographie\n\nMise en production des projets de data science, Romain Avouac & Lino Galiana (ENSAE)\nRefactoring.Guru"
+  },
+  {
+    "objectID": "doc/context2.html",
+    "href": "doc/context2.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/context2.html#avant-de-commencer",
+    "href": "doc/context2.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/context2.html#appeler-un-webservice-à-la-main",
+    "href": "doc/context2.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/avancee3.html",
+    "href": "doc/avancee3.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/avancee3.html#avant-de-commencer",
+    "href": "doc/avancee3.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/avancee3.html#appeler-un-webservice-à-la-main",
+    "href": "doc/avancee3.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/avancee1.html",
+    "href": "doc/avancee1.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/avancee1.html#avant-de-commencer",
+    "href": "doc/avancee1.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/avancee1.html#appeler-un-webservice-à-la-main",
+    "href": "doc/avancee1.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/application1.html",
+    "href": "doc/application1.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/application1.html#avant-de-commencer",
+    "href": "doc/application1.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/application1.html#appeler-un-webservice-à-la-main",
+    "href": "doc/application1.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/application2.html",
+    "href": "doc/application2.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/application2.html#avant-de-commencer",
+    "href": "doc/application2.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/application2.html#appeler-un-webservice-à-la-main",
+    "href": "doc/application2.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/avancee2.html",
+    "href": "doc/avancee2.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/avancee2.html#avant-de-commencer",
+    "href": "doc/avancee2.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/avancee2.html#appeler-un-webservice-à-la-main",
+    "href": "doc/avancee2.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/context1.html",
+    "href": "doc/context1.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/context1.html#avant-de-commencer",
+    "href": "doc/context1.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/context1.html#appeler-un-webservice-à-la-main",
+    "href": "doc/context1.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/context3.html",
+    "href": "doc/context3.html",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/context3.html#avant-de-commencer",
+    "href": "doc/context3.html#avant-de-commencer",
+    "title": "Webservices et formats de données",
+    "section": "",
+    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+  },
+  {
+    "objectID": "doc/context3.html#appeler-un-webservice-à-la-main",
+    "href": "doc/context3.html#appeler-un-webservice-à-la-main",
+    "title": "Webservices et formats de données",
+    "section": "1 Appeler un webservice à la main",
+    "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  }
+]
