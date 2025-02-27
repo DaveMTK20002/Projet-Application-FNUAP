@@ -66,7 +66,7 @@ Pour l'application d'IA, une première version utilisant exclusivement du **Mach
 Les produits proposés dans ce projet revêtent un caractère très innovateur, notamment :
 
 - Ils permettent l’utilisation des nouvelles technologies dans le domaine d’agriculture ;
-- Ils permettent de capitaliser l’agriculture en introduisant l’usage de machines adaptées ;
+- Ils permettent de capitaliser l’agriculture en introduisant l’usage de machines adaptées;
 - Ils permettent la création de façon industrielle des engrais naturels ;
 - Ils permettent de développer l’agriculture de précision rarement encore observée en Afrique.
 
