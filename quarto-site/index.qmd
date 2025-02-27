@@ -20,9 +20,6 @@ from: markdown+emoji
 - [Découvrir le projet](doc/context1.qmd)
 - [Tester l'application](doc/application1.qmd)
 
-### Aspect visuel
-
-Voici une image de l'application: ...
 
 ## Equipe de conception
 

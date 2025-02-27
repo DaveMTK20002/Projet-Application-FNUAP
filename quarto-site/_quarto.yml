@@ -18,28 +18,25 @@ website:
       - text: Contexte
         menu:
           - href: doc/context1.qmd
-            text: "Présentation de la compétition"
+            text: "Présentation du projet"
           - href: doc/context2.qmd
-            text: "Présentation de l'équipe"
+            text: "Présentation de la compétition"
           - href: doc/context3.qmd
-            text: "Prix reçus"
+            text: "Equipe de développement"
       - text: Avancement
         menu:
           - href: doc/avancee1.qmd
             text: "Introduction"
           - href: doc/avancee2.qmd
             text: "Méthodologie adoptée"
-          - href: https://ludo2ne.github.io/Git-tuto/doc/presentation.html
-            text: "Git"
-            target: "_blank"
           - href: doc/avancee3.qmd
             text: "Deploiement du code"
       - text: Application
         menu:
           - href: doc/application1.qmd
-            text: "Documentation"
+            text: "Tester l'application"
           - href: doc/application2.qmd
-            text: "Application"
+            text: "Source de données"
     right:
       - icon: github
         href: "{{< meta var.url-repo >}}"
