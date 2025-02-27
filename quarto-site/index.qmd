@@ -13,10 +13,10 @@ from: markdown+emoji
 ## Présentation du projet
 
 - Problématique: La surexploitation du sol posé par le fait que la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité.
-- Solution proposée : Grâce à IAGRIKOL, il est possible d'analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements.
+- Solution proposée : Grâce à IAGRIKOL, il est possible d'analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements. On pourra ainsi pour chaque culture l'ensemencer dans une terre propice à sa plantation.
 - Avantage clé : Facilité d'utilisation, rapidité, et précision grâce à des algorithmes avancés de machine learning.
 - [Découvrir le projet](doc/context1.qmd)
-- [Tester l'application](doc/application2.qmd)
+- [Tester l'application](doc/application1.qmd)
 
 ### Aspect visuel
 
@@ -25,17 +25,21 @@ Voici une image de l'application: ...
 ## Equipe de conception
 
 Ce projet a été développé par une équipe de passionés:
-- KOKOLO Reine Vertu
-- LOUSSINGUI BALENGUISSA Merveille
-- MOUNTEKA NDONDON Davick
+
+- KOKOLO Reine Vertu (Conceptrice)
+- LOUSSINGUI BALENGUISSA Merveille (Concepteur)
+- MOUNTEKA NDONDON Davick (Développeur)
 
 ::: {.callout-note}
-Ce projet est à l'initiative de la gent féminine, organisé dans le cadre de la **journée de la fille scientifique** [(Voir plus)](doc/context2.qmd)
+Ce projet est à l'initiative de la gent féminine, organisé dans le cadre de la **journée de la fille scientifique** [(Plus sur la journée)](doc/context2.qmd)
 :::
+
+En savoir plus sur les concepteurs [(Plus sur les concepteurs )](doc/context3.qmd)
 
 
 
 ## Bibliographie
 
-- [Mise en production des projets de data science](https://ensae-reproductibilite.github.io/website/){target="_blank"}, Romain Avouac & Lino Galiana (ENSAE)
-- [Refactoring.Guru](https://refactoring.guru/fr){target="_blank"}
+- [github vers le code du projet](https://github.com/DaveMTK20002/Projet-Application-FNUAP){target="_blank"}
+- [Package R d'extraction des données](https://github.com/BjnNowak/frex){target="_blank"}
+- [Annuaire Statistique du Cameroun](https://ins-cameroun.cm/statistique/annuaire-statistique-du-cameroun-edition-2019-2/){target="_blank"}, INS Cameroun (2019).

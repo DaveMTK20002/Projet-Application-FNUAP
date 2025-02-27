@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Rémi Pépin, Ludovic Deneuville">
-<meta name="description" content="TP 3">
+<meta name="author" content="Davick MOUNTEKA">
+<meta name="description" content="Découvrir le projet">
 
-<title>Webservices et formats de données – IAGRIKOL: Analyse intelligente du sol</title>
+<title>Contexte et justification du projet – IAGRIKOL: Analyse intelligente du sol</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -182,11 +182,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#avant-de-commencer" id="toc-avant-de-commencer" class="nav-link active" data-scroll-target="#avant-de-commencer">Avant de commencer</a></li>
-  <li><a href="#appeler-un-webservice-à-la-main" id="toc-appeler-un-webservice-à-la-main" class="nav-link" data-scroll-target="#appeler-un-webservice-à-la-main"><span class="header-section-number">1</span> Appeler un webservice à la main</a>
+  <li><a href="#contexte" id="toc-contexte" class="nav-link active" data-scroll-target="#contexte"><span class="header-section-number">1</span> Contexte</a></li>
+  <li><a href="#problème-à-résoudre-et-conséquences-du-problème" id="toc-problème-à-résoudre-et-conséquences-du-problème" class="nav-link" data-scroll-target="#problème-à-résoudre-et-conséquences-du-problème"><span class="header-section-number">2</span> Problème à résoudre et conséquences du problème</a></li>
+  <li><a href="#solution-identifiée" id="toc-solution-identifiée" class="nav-link" data-scroll-target="#solution-identifiée"><span class="header-section-number">3</span> Solution identifiée</a></li>
+  <li><a href="#description-du-du-service-proposé" id="toc-description-du-du-service-proposé" class="nav-link" data-scroll-target="#description-du-du-service-proposé"><span class="header-section-number">4</span> Description du du service proposé</a></li>
+  <li><a href="#prototypage-ou-idée-dentreprise" id="toc-prototypage-ou-idée-dentreprise" class="nav-link" data-scroll-target="#prototypage-ou-idée-dentreprise"><span class="header-section-number">5</span> Prototypage ou idée d’entreprise</a></li>
+  <li><a href="#caractère-innovant-du-produit" id="toc-caractère-innovant-du-produit" class="nav-link" data-scroll-target="#caractère-innovant-du-produit"><span class="header-section-number">6</span> Caractère innovant du produit</a></li>
+  <li><a href="#modèle-économique" id="toc-modèle-économique" class="nav-link" data-scroll-target="#modèle-économique"><span class="header-section-number">7</span> Modèle économique</a></li>
+  <li><a href="#description-du-marché-potentiel-clientèle-ciblée" id="toc-description-du-marché-potentiel-clientèle-ciblée" class="nav-link" data-scroll-target="#description-du-marché-potentiel-clientèle-ciblée"><span class="header-section-number">8</span> Description du marché potentiel (clientèle ciblée)</a></li>
+  <li><a href="#impact-environnemental-et-sociétal" id="toc-impact-environnemental-et-sociétal" class="nav-link" data-scroll-target="#impact-environnemental-et-sociétal"><span class="header-section-number">9</span> Impact environnemental et sociétal</a>
   <ul class="collapse">
-  <li><a href="#webservices" id="toc-webservices" class="nav-link" data-scroll-target="#webservices"><span class="header-section-number">1.1</span> Webservices</a></li>
-  <li><a href="#premières-requêtes-get" id="toc-premières-requêtes-get" class="nav-link" data-scroll-target="#premières-requêtes-get"><span class="header-section-number">1.2</span> Premières requêtes GET</a></li>
+  <li><a href="#premières-requêtes-get" id="toc-premières-requêtes-get" class="nav-link" data-scroll-target="#premières-requêtes-get"><span class="header-section-number">9.1</span> Premières requêtes GET</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -200,12 +206,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Webservices et formats de données</h1>
+<h1 class="title">Contexte et justification du projet</h1>
 </div>
 
 <div>
   <div class="description">
-    TP 3
+    Découvrir le projet
   </div>
 </div>
 
@@ -215,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Rémi Pépin, Ludovic Deneuville </p>
+             <p>Davick MOUNTEKA </p>
           </div>
   </div>
     
@@ -228,71 +234,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="avant-de-commencer" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="avant-de-commencer">Avant de commencer</h2>
-<p><span class="emoji" data-emoji="scream">😱</span> Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.</p>
-<p>Il mélange explications complètes et manipulations pour être au maximum autosuffisant.</p>
-<p><strong>Vous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.</strong></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Objectifs">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectifs
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Dans ce TP vous allez :</p>
-<ul>
-<li>Faire des appels à un webservice à la main avec <em>Insomnia</em></li>
-<li>Faire des appels à un webservice avec la bibliothèque python <em>requests</em></li>
-<li>Découvrir la page swagger d’un webservice</li>
-<li>Manipuler différents formats de données</li>
-<li>Créer un webservice avec le framework python <em>fastAPI</em></li>
-</ul>
-</div>
-</div>
+<section id="contexte" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="contexte"><span class="header-section-number">1</span> Contexte</h2>
+<p>L’agriculture représente un secteur capital dans les économies des pays Africains. En effet, <strong>le secteur agricole en Afrique sub-saharienne représente une part importante de la richesse nationale, entre 20 et 50% selon les pays et est porteur de nombreux emplois.</strong></p>
+<p>Cependant, ce secteur souffre de beaucoup d’insuffisances. Il reste peu capitalisé et encore fortement orienté vers l’agriculture de subsistance et caractérisé par des rendements faibles.</p>
+<p>Pourtant, l’agriculture doit permettre de nourrir une population de plus en plus importante (les projections démographiques prévoient une population supérieure à 9 milliards d’individus d’ici à 2050), dans un contexte de tension sur les ressources naturelles (notamment la disponibilité des terres agricoles) et d’une nécessaire réduction de l’empreinte environnementale de l’agriculture. Cela suppose une intensification de la production agricole, tout en limitant/réduisant ses impacts sur l’environnement, notamment sur la dégradation des sols. C’est <strong>« l’intensification durable », reconnu et promu sur le plan international (FAO), qui devrait être en mesure de répondre à ce défi.</strong></p>
 </section>
-<section id="appeler-un-webservice-à-la-main" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="appeler-un-webservice-à-la-main"><span class="header-section-number">1</span> Appeler un webservice à la main</h2>
-<p>La première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel <a href="https://insomnia.rest/" target="_blank">Insomnia</a> installé sur votre machine.</p>
-<section id="webservices" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="webservices"><span class="header-section-number">1.1</span> Webservices</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Webservice</strong> : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (<a href="https://en.wikipedia.org/wiki/Web_service" target="_blank">article wikipedia</a>).</p>
-<p>Dans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (<strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol) qui respecte généralement l’architecture REST (<strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer).</p>
-<p>Mais il en existe d’autre comme SOAP (<strong>S</strong>imple <strong>O</strong>bjet- <strong>A</strong>ccess <strong>P</strong>rotocol) ou RPC (<strong>R</strong>emote <strong>P</strong>rocedure <strong>C</strong>all)</p>
-</div>
-</div>
-<p>En d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir <strong>requêter</strong> soit :</p>
+<section id="problème-à-résoudre-et-conséquences-du-problème" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="problème-à-résoudre-et-conséquences-du-problème"><span class="header-section-number">2</span> Problème à résoudre et conséquences du problème</h2>
+<p>Alors que la demande des denrées alimentaires est de plus en plus croissante, les agriculteurs se lancent dans une production de plus en plus accrue. Pour répondre aux besoins exprimés, les agriculteurs ont recours à l’utilisation excessive d’engrais chimiques et au non-respect des normes en matière d’exploitation du sol. Il se pose ainsi un problème à deux volets :</p>
 <ul>
-<li>pour obtenir des <strong>ressources</strong></li>
-<li>pour <strong>modifier</strong> les ressources accessibles.</li>
-</ul>
-<p>Un webservice peut seulement avoir pour but d’être une <strong>point d’accès unique et normalisé</strong> à des données (comme une interface à une base de données), mais il peut également être une <strong>manière de contrôler un système d’informations</strong> (lancer des travaux, les mettre en attente, récupérer des résultats…)</p>
-<p>Les webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.</p>
-<p>Pour cela il vous faut :</p>
-<ul>
-<li>l’adresse de la ressource, son <em>Uniforme Resource Identifier</em> (URI)
-<ul>
-<li>c’est une notion plus générale que les <em>Uniforme Resource Locator</em> (URL)</li>
-</ul></li>
-<li>une méthode (GET, POST, PUT, DELETE, <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">liste des méthodes</a>)</li>
-<li>et potentiellement des données</li>
+<li><strong>L’emploi excessif des produits chimiques qui peut conduire à l’insécurité alimentaire. Ceci, avec des conséquences néfastes sur la santé des populations consommatrices (maladies, carences en vitamines, etc.) ainsi que sur leur longévité sur le long terme ;</strong></li>
+<li>La surexploitation du sol : <strong>la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité. Un agriculteur peut planter une grande quantité de semences sur une terre qui ne produira pas les rendements espérés. On parle alors à la fois de dégradation du sol et de non optimalité de l’utilisation des ressources qui pourtant se font de plus en plus rares.</strong></li>
 </ul>
 </section>
-<section id="premières-requêtes-get" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="premières-requêtes-get"><span class="header-section-number">1.2</span> Premières requêtes GET</h3>
+<section id="solution-identifiée" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="solution-identifiée"><span class="header-section-number">3</span> Solution identifiée</h2>
+<p>Dans ce contexte, il faut proposer une solution qui permette aux agriculteurs d’augmenter leur rentabilité tout en minimisant leur pression sur les ressources ainsi que leur impact sur le sol.</p>
+<p>Dans cette perspective, ce projet identifie la solution suivante :</p>
+<ul>
+<li>Permettre aux agriculteurs de disposer d’un système d’informations en temps réel sur la qualité et le niveau de rendement de leur surface cultivable : <strong>grâce à une application basée sur l’Intelligence artificielle (IA) ;</strong></li>
+<li>Permettre aux agriculteurs de réduire voire supprimer leur utilisation d’engrais chimiques : à travers <strong>le développement d’un dispositif de production d’engrais naturels à partir de déchets naturels issus de leur activité.</strong></li>
+</ul>
+</section>
+<section id="description-du-du-service-proposé" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="description-du-du-service-proposé"><span class="header-section-number">4</span> Description du du service proposé</h2>
+<p>Ce projet propose la mise en place de deux éléments interreliés pour permettre une production efficiente. Ils sont décrits de manière suivante :</p>
+<ul>
+<li><strong>Un dispositif (machine) permettant la transformation en engrais naturels des déchets issus de l’activité agricole</strong>. En effet, les herbes fraichement coupées,les peaux de bananes, etc., possèdent des composants ayant les mêmes propriétés que les engrais chimiques. Etant donné que ces éléments sont très récurrents chez les agriculteurs, leur utilisation réduit significativement les coûts d’achats des entreprises en produits chimiques importés. Après défrichement par les agriculteurs, ceux-ci rassemblent les herbes arrachées et les introduisent dans la machine. Celle-ci à son tour effectue un tri entre les herbes, le sol et les éléments inutiles (sachets, cailloux, etc.). La machine évacue ensuite les objets indésirables par un canal qui donne vers l’extérieur, le sol vers le dispositif d’analyse et les herbes sont acheminées vers un autre compartiment de la machine. Par la suite, dans ce compartiment, la machine crée un environnement qui permettra aux herbes mises en présence de se décomposer et se transformer ainsi en engrais. Il s’agira pour la machine de reproduire les conditions de décomposition naturelle de l’herbe et de le faire en un temps plus raccourci. Quand ce temps est écoulé, la machine achemine l’engrais vers l’extérieur pour une utilisation par les tiers ;</li>
+<li><strong>Une application basée sur l’IA et le Machine Learning capable d’analyser le sol</strong>. Cette application est interconnectée avec le dispositif décrit plus haut pour analyser le sol recueilli des herbes préalablement coupées. Il sera question pour l’application de s’entrainer sur les caractéristiques de plusieurs autres types de sol et de prédire la qualité du sol considéré relativement au temps (sol riche, pauvre, sec, moyen, etc.). La machine pourra également faire une proposition des cultures appropriées pour le type de sol répertorié. Par la suite, l’application effectue des simulations statistiques de récolte pour ainsi en faire ressortir le rendement moyen espéré (en termes de nombre de pousses par unité de surface, d’arbres par unité de surface, etc.). Ces simulations sont basées sur les modèles de prévision mis en place par les statistiques agricoles. Cette application pourra être accessible en ligne sur une plateforme payante pour permettre l’utilisation à une plus large gamme d’utilisateurs. Dans ce cas, elle se servira des relevés topographiques des terres localisées afin de faire l’analyse. Ces relevés n’étant pas toujours précis, cela incitera donc les entreprises à se procurer directement leur propre extension de l’application.</li>
+</ul>
+</section>
+<section id="prototypage-ou-idée-dentreprise" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="prototypage-ou-idée-dentreprise"><span class="header-section-number">5</span> Prototypage ou idée d’entreprise</h2>
+<p>Pour des contraintes de temps et de ressources, un prototype n’est pas encore disponible. Mais l’idée d’entreprise est bien claire : nous entendons mettre en place une entreprise productrice de machines à engrais naturels et d’applications d’analyse du sol. Pour ce faire, il sera question de se constituer un personnel diversifié composé de statisticiens, agronomes, cartographe et bien d’autres. Des équipements mécaniques seront également nécessaires pour l’élaboration de la machine.</p>
+<p>Pour l’application d’IA, une première version utilisant exclusivement du <strong>Machine Learning</strong> sera d’abord déployé, et en fonction de la disponibilité des ressources, une version avec le <strong>Deep Learning</strong> sera développée.</p>
+</section>
+<section id="caractère-innovant-du-produit" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="caractère-innovant-du-produit"><span class="header-section-number">6</span> Caractère innovant du produit</h2>
+<p>Les produits proposés dans ce projet revêtent un caractère très innovateur, notamment : - Ils permettent l’utilisation des nouvelles technologies dans le domaine d’agriculture ; - Ils permettent de capitaliser l’agriculture en introduisant l’usage de machines adaptées ; - Ils permettent la création de façon industrielle des engrais naturels ; - Ils permettent de développer l’agriculture de précision rarement encore observée en Afrique.</p>
+</section>
+<section id="modèle-économique" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="modèle-économique"><span class="header-section-number">7</span> Modèle économique</h2>
+<p>L’entreprise que nous entendons créer sera spécialisée dans la production de machines à engrais naturels et des applications d’analyse du sol. Celle-ci aura un modèle économique structuré selon les points suivants :</p>
+<ul>
+<li>La vente massive des machines à engrais naturels auprès des tiers : L’entreprise pourra vendre directement aux clients les machines et générer des revenus grâce à celles-ci ;</li>
+<li>La commercialisation sous licence de l’application d’analyse du sol ;</li>
+<li>La commercialisation des données obtenues à partir des différentes analyses. En effet, les données analysées par les entreprises seront stockées sur une base de données gérée par l’entreprise. L’entreprise veillera bien entendu à préserver l’anonymat de celles-ci ;</li>
+<li>La maintenance des appareils.</li>
+</ul>
+</section>
+<section id="description-du-marché-potentiel-clientèle-ciblée" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="description-du-marché-potentiel-clientèle-ciblée"><span class="header-section-number">8</span> Description du marché potentiel (clientèle ciblée)</h2>
+<p>Les produits et services fournis par l’entreprise seront destinés principalement:</p>
+<ul>
+<li>Aux entreprises agricoles : les grandes exploitations agricoles en tireront beaucoup du recours à la machine à engrais naturels et à l’application basée sur l’IA pour l’évaluation de leur rendement futur ;</li>
+<li>Aux ménages individuels : les personnes physiques qui sont exploitantes agricoles peuvent également se servir de l’application et de la machine à engrais naturels pour leurs potagers internes ;</li>
+<li>Aux administrations publiques et collectivités territoriales : pour les projets communautaires ou les opérations liées au développement des centres agricoles publics ;</li>
+<li>La communauté scientifique, les chercheurs et les organisations internationales pour des questions d’ordre expérimental.</li>
+</ul>
+</section>
+<section id="impact-environnemental-et-sociétal" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="impact-environnemental-et-sociétal"><span class="header-section-number">9</span> Impact environnemental et sociétal</h2>
+<p>[ ] Au niveau environnemental, le projet permettra de :</p>
+<ul>
+<li>Réduire l’impact sur la dégradation des sols : Grâce à cette technologie, le recours aux produits chimiques sera progressivement éradiqué, réduisant ainsi son effet d’appauvrissement du sol. En évitant une utilisation excessive d’engrais et de pesticides, les outils d’agriculture de précision peuvent réduire l’impact environnemental de la production agricole tout en améliorant les rendements ;</li>
+<li>La réduction de la pollution : les déchets issus des activités agricoles ne seront plus entièrement brûlés ou entreposés. Ils seront réinvestis dans l’activité pour une utilisation future et rentable. Ainsi, il y aura moins de déchets rejetés dans la nature et donc une réduction significative de la production des gaz à effet de serre qui sont toxiques.</li>
+</ul>
+<p>[ ] Au niveau sociétal, il permettra :</p>
+<ul>
+<li>Soutien à la sécurité alimentaire : l’utilisation d’engrais naturels permettra la production de produits 100% bio, plus enrichis en teneur pour la plupart des composants nutritifs (vitamines, nutriments,). Cela peut avoir un effet important sur la durée de vie des populations et réduire l’apparition des maladies dues à la sous-alimentation ou les phénomènes de malnutrition ;</li>
+<li>Création d’emplois : La mise en place d’une entreprise d’agriculture de précision peut créer des emplois pour les locaux dans les domaines de la surveillance des cultures, de l’analyse de données, de la maintenance des équipements, de l’assistance technique mais aussi de la force de travail physique ;</li>
+<li>L’amélioration de la productivité et des rendements : en utilisant les technologies d’agriculture de précision pour surveiller les cultures, les agriculteurs peuvent identifier et résoudre rapidement les problèmes tels que les carences en nutriments et les maladies des plantes, améliorer la qualité des récoltes et augmenter les rendements.</li>
+</ul>
+<section id="premières-requêtes-get" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="premières-requêtes-get"><span class="header-section-number">9.1</span> Premières requêtes GET</h3>
 <ul class="task-list">
 <li><label><input type="checkbox">Lancez le programme <strong>Insomnia</strong></label>
 <ul>

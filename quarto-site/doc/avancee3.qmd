@@ -2,7 +2,7 @@
 ---
 title: "Webservices et formats de données"
 description: "TP 3"
-author: "Rémi Pépin, Ludovic Deneuville"
+author: "Davick MOUNTEKA"
 format:
   html:
     toc: true

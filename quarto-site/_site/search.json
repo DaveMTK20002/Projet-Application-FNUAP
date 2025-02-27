@@ -30,9 +30,9 @@
   {
     "objectID": "doc/context2.html",
     "href": "doc/context2.html",
-    "title": "Webservices et formats de données",
+    "title": "Contexte et justification du projet",
     "section": "",
-    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+    "text": "La semaine du 11 au 16 mars 2024 a été marquée par la SEMAINE DE LA FILLE SCIENTIFIQUE. Elle s’est tenue à l’Ecole Nationale Supérieure Polytechnique de Yaoundé (ENSPY). Son thème: “Scientifique et Leader, sommes-nous prêts à incarner ce modèle de femme?”.\nCet évenement à été organisée par l’AFENSPY (Association des Filles de l’ENSPY). Elle était dirigée par le Bureau AMAZONE sous le haut Patronage de leurs excellences MINPROFF, MINDHU et MINJEC. Ceci, sous le co-parrainage de Mme la Directrice de la CCA, Mme la Présidente des Entreprises de l’Excellence du Cameroun et M. Le Représentant Résidant de l’IAI Cameroun. Les partenaires de marque étant le UNFPA (Fonds des Nations Unies pour les Activités en matière de Population) et l’OAPI (Organisation Africaine de la Propriété Intellectuelle).\nA l’occasion de cete journée, plusieurs activités étaient au programme, notamment:"
   },
   {
     "objectID": "doc/context2.html#avant-de-commencer",
@@ -93,42 +93,42 @@
   {
     "objectID": "doc/application1.html",
     "href": "doc/application1.html",
-    "title": "Webservices et formats de données",
+    "title": "Autour de l’appication",
     "section": "",
     "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
   },
   {
     "objectID": "doc/application1.html#avant-de-commencer",
     "href": "doc/application1.html#avant-de-commencer",
-    "title": "Webservices et formats de données",
+    "title": "Autour de l’appication",
     "section": "",
     "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
   },
   {
     "objectID": "doc/application1.html#appeler-un-webservice-à-la-main",
     "href": "doc/application1.html#appeler-un-webservice-à-la-main",
-    "title": "Webservices et formats de données",
+    "title": "Autour de l’appication",
     "section": "1 Appeler un webservice à la main",
     "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
   },
   {
     "objectID": "doc/application2.html",
     "href": "doc/application2.html",
-    "title": "Webservices et formats de données",
+    "title": "Autour de l’application",
     "section": "",
     "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
   },
   {
     "objectID": "doc/application2.html#avant-de-commencer",
     "href": "doc/application2.html#avant-de-commencer",
-    "title": "Webservices et formats de données",
+    "title": "Autour de l’application",
     "section": "",
     "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
   },
   {
     "objectID": "doc/application2.html#appeler-un-webservice-à-la-main",
     "href": "doc/application2.html#appeler-un-webservice-à-la-main",
-    "title": "Webservices et formats de données",
+    "title": "Autour de l’application",
     "section": "1 Appeler un webservice à la main",
     "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
   },
@@ -156,9 +156,9 @@
   {
     "objectID": "doc/context1.html",
     "href": "doc/context1.html",
-    "title": "Webservices et formats de données",
+    "title": "Contexte et justification du projet",
     "section": "",
-    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+    "text": "L’agriculture représente un secteur capital dans les économies des pays Africains. En effet, le secteur agricole en Afrique sub-saharienne représente une part importante de la richesse nationale, entre 20 et 50% selon les pays et est porteur de nombreux emplois.\nCependant, ce secteur souffre de beaucoup d’insuffisances. Il reste peu capitalisé et encore fortement orienté vers l’agriculture de subsistance et caractérisé par des rendements faibles.\nPourtant, l’agriculture doit permettre de nourrir une population de plus en plus importante (les projections démographiques prévoient une population supérieure à 9 milliards d’individus d’ici à 2050), dans un contexte de tension sur les ressources naturelles (notamment la disponibilité des terres agricoles) et d’une nécessaire réduction de l’empreinte environnementale de l’agriculture. Cela suppose une intensification de la production agricole, tout en limitant/réduisant ses impacts sur l’environnement, notamment sur la dégradation des sols. C’est « l’intensification durable », reconnu et promu sur le plan international (FAO), qui devrait être en mesure de répondre à ce défi."
   },
   {
     "objectID": "doc/context1.html#avant-de-commencer",
@@ -177,22 +177,99 @@
   {
     "objectID": "doc/context3.html",
     "href": "doc/context3.html",
-    "title": "Webservices et formats de données",
+    "title": "Contexte et justification du projet",
     "section": "",
     "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
   },
   {
     "objectID": "doc/context3.html#avant-de-commencer",
     "href": "doc/context3.html#avant-de-commencer",
-    "title": "Webservices et formats de données",
+    "title": "Contexte et justification du projet",
     "section": "",
     "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
   },
   {
     "objectID": "doc/context3.html#appeler-un-webservice-à-la-main",
     "href": "doc/context3.html#appeler-un-webservice-à-la-main",
-    "title": "Webservices et formats de données",
+    "title": "Contexte et justification du projet",
     "section": "1 Appeler un webservice à la main",
     "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/context1.html#contexte",
+    "href": "doc/context1.html#contexte",
+    "title": "Contexte et justification du projet",
+    "section": "",
+    "text": "L’agriculture représente un secteur capital dans les économies des pays Africains. En effet, le secteur agricole en Afrique sub-saharienne représente une part importante de la richesse nationale, entre 20 et 50% selon les pays et est porteur de nombreux emplois.\nCependant, ce secteur souffre de beaucoup d’insuffisances. Il reste peu capitalisé et encore fortement orienté vers l’agriculture de subsistance et caractérisé par des rendements faibles.\nPourtant, l’agriculture doit permettre de nourrir une population de plus en plus importante (les projections démographiques prévoient une population supérieure à 9 milliards d’individus d’ici à 2050), dans un contexte de tension sur les ressources naturelles (notamment la disponibilité des terres agricoles) et d’une nécessaire réduction de l’empreinte environnementale de l’agriculture. Cela suppose une intensification de la production agricole, tout en limitant/réduisant ses impacts sur l’environnement, notamment sur la dégradation des sols. C’est « l’intensification durable », reconnu et promu sur le plan international (FAO), qui devrait être en mesure de répondre à ce défi."
+  },
+  {
+    "objectID": "doc/context1.html#problème-à-résoudre-et-conséquences-du-problème",
+    "href": "doc/context1.html#problème-à-résoudre-et-conséquences-du-problème",
+    "title": "Contexte et justification du projet",
+    "section": "2 Problème à résoudre et conséquences du problème",
+    "text": "2 Problème à résoudre et conséquences du problème\nAlors que la demande des denrées alimentaires est de plus en plus croissante, les agriculteurs se lancent dans une production de plus en plus accrue. Pour répondre aux besoins exprimés, les agriculteurs ont recours à l’utilisation excessive d’engrais chimiques et au non-respect des normes en matière d’exploitation du sol. Il se pose ainsi un problème à deux volets :\n\nL’emploi excessif des produits chimiques qui peut conduire à l’insécurité alimentaire. Ceci, avec des conséquences néfastes sur la santé des populations consommatrices (maladies, carences en vitamines, etc.) ainsi que sur leur longévité sur le long terme ;\nLa surexploitation du sol : la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité. Un agriculteur peut planter une grande quantité de semences sur une terre qui ne produira pas les rendements espérés. On parle alors à la fois de dégradation du sol et de non optimalité de l’utilisation des ressources qui pourtant se font de plus en plus rares."
+  },
+  {
+    "objectID": "doc/context1.html#solution-identifiée",
+    "href": "doc/context1.html#solution-identifiée",
+    "title": "Contexte et justification du projet",
+    "section": "3 Solution identifiée",
+    "text": "3 Solution identifiée\nDans ce contexte, il faut proposer une solution qui permette aux agriculteurs d’augmenter leur rentabilité tout en minimisant leur pression sur les ressources ainsi que leur impact sur le sol.\nDans cette perspective, ce projet identifie la solution suivante :\n\nPermettre aux agriculteurs de disposer d’un système d’informations en temps réel sur la qualité et le niveau de rendement de leur surface cultivable : grâce à une application basée sur l’Intelligence artificielle (IA) ;\nPermettre aux agriculteurs de réduire voire supprimer leur utilisation d’engrais chimiques : à travers le développement d’un dispositif de production d’engrais naturels à partir de déchets naturels issus de leur activité."
+  },
+  {
+    "objectID": "doc/context1.html#description-du-du-service-proposé",
+    "href": "doc/context1.html#description-du-du-service-proposé",
+    "title": "Contexte et justification du projet",
+    "section": "4 Description du du service proposé",
+    "text": "4 Description du du service proposé\nCe projet propose la mise en place de deux éléments interreliés pour permettre une production efficiente. Ils sont décrits de manière suivante :\n\nUn dispositif (machine) permettant la transformation en engrais naturels des déchets issus de l’activité agricole. En effet, les herbes fraichement coupées,les peaux de bananes, etc., possèdent des composants ayant les mêmes propriétés que les engrais chimiques. Etant donné que ces éléments sont très récurrents chez les agriculteurs, leur utilisation réduit significativement les coûts d’achats des entreprises en produits chimiques importés. Après défrichement par les agriculteurs, ceux-ci rassemblent les herbes arrachées et les introduisent dans la machine. Celle-ci à son tour effectue un tri entre les herbes, le sol et les éléments inutiles (sachets, cailloux, etc.). La machine évacue ensuite les objets indésirables par un canal qui donne vers l’extérieur, le sol vers le dispositif d’analyse et les herbes sont acheminées vers un autre compartiment de la machine. Par la suite, dans ce compartiment, la machine crée un environnement qui permettra aux herbes mises en présence de se décomposer et se transformer ainsi en engrais. Il s’agira pour la machine de reproduire les conditions de décomposition naturelle de l’herbe et de le faire en un temps plus raccourci. Quand ce temps est écoulé, la machine achemine l’engrais vers l’extérieur pour une utilisation par les tiers ;\nUne application basée sur l’IA et le Machine Learning capable d’analyser le sol. Cette application est interconnectée avec le dispositif décrit plus haut pour analyser le sol recueilli des herbes préalablement coupées. Il sera question pour l’application de s’entrainer sur les caractéristiques de plusieurs autres types de sol et de prédire la qualité du sol considéré relativement au temps (sol riche, pauvre, sec, moyen, etc.). La machine pourra également faire une proposition des cultures appropriées pour le type de sol répertorié. Par la suite, l’application effectue des simulations statistiques de récolte pour ainsi en faire ressortir le rendement moyen espéré (en termes de nombre de pousses par unité de surface, d’arbres par unité de surface, etc.). Ces simulations sont basées sur les modèles de prévision mis en place par les statistiques agricoles. Cette application pourra être accessible en ligne sur une plateforme payante pour permettre l’utilisation à une plus large gamme d’utilisateurs. Dans ce cas, elle se servira des relevés topographiques des terres localisées afin de faire l’analyse. Ces relevés n’étant pas toujours précis, cela incitera donc les entreprises à se procurer directement leur propre extension de l’application."
+  },
+  {
+    "objectID": "doc/context1.html#prototypage-ou-idée-dentreprise",
+    "href": "doc/context1.html#prototypage-ou-idée-dentreprise",
+    "title": "Contexte et justification du projet",
+    "section": "5 Prototypage ou idée d’entreprise",
+    "text": "5 Prototypage ou idée d’entreprise\nPour des contraintes de temps et de ressources, un prototype n’est pas encore disponible. Mais l’idée d’entreprise est bien claire : nous entendons mettre en place une entreprise productrice de machines à engrais naturels et d’applications d’analyse du sol. Pour ce faire, il sera question de se constituer un personnel diversifié composé de statisticiens, agronomes, cartographe et bien d’autres. Des équipements mécaniques seront également nécessaires pour l’élaboration de la machine.\nPour l’application d’IA, une première version utilisant exclusivement du Machine Learning sera d’abord déployé, et en fonction de la disponibilité des ressources, une version avec le Deep Learning sera développée."
+  },
+  {
+    "objectID": "doc/context1.html#caractère-innovant-du-produit",
+    "href": "doc/context1.html#caractère-innovant-du-produit",
+    "title": "Contexte et justification du projet",
+    "section": "6 Caractère innovant du produit",
+    "text": "6 Caractère innovant du produit\nLes produits proposés dans ce projet revêtent un caractère très innovateur, notamment : - Ils permettent l’utilisation des nouvelles technologies dans le domaine d’agriculture ; - Ils permettent de capitaliser l’agriculture en introduisant l’usage de machines adaptées ; - Ils permettent la création de façon industrielle des engrais naturels ; - Ils permettent de développer l’agriculture de précision rarement encore observée en Afrique."
+  },
+  {
+    "objectID": "doc/context1.html#modèle-économique",
+    "href": "doc/context1.html#modèle-économique",
+    "title": "Contexte et justification du projet",
+    "section": "7 Modèle économique",
+    "text": "7 Modèle économique\nL’entreprise que nous entendons créer sera spécialisée dans la production de machines à engrais naturels et des applications d’analyse du sol. Celle-ci aura un modèle économique structuré selon les points suivants :\n\nLa vente massive des machines à engrais naturels auprès des tiers : L’entreprise pourra vendre directement aux clients les machines et générer des revenus grâce à celles-ci ;\nLa commercialisation sous licence de l’application d’analyse du sol ;\nLa commercialisation des données obtenues à partir des différentes analyses. En effet, les données analysées par les entreprises seront stockées sur une base de données gérée par l’entreprise. L’entreprise veillera bien entendu à préserver l’anonymat de celles-ci ;\nLa maintenance des appareils."
+  },
+  {
+    "objectID": "doc/context1.html#description-du-marché-potentiel-clientèle-ciblée",
+    "href": "doc/context1.html#description-du-marché-potentiel-clientèle-ciblée",
+    "title": "Contexte et justification du projet",
+    "section": "8 Description du marché potentiel (clientèle ciblée)",
+    "text": "8 Description du marché potentiel (clientèle ciblée)\nLes produits et services fournis par l’entreprise seront destinés principalement:\n\nAux entreprises agricoles : les grandes exploitations agricoles en tireront beaucoup du recours à la machine à engrais naturels et à l’application basée sur l’IA pour l’évaluation de leur rendement futur ;\nAux ménages individuels : les personnes physiques qui sont exploitantes agricoles peuvent également se servir de l’application et de la machine à engrais naturels pour leurs potagers internes ;\nAux administrations publiques et collectivités territoriales : pour les projets communautaires ou les opérations liées au développement des centres agricoles publics ;\nLa communauté scientifique, les chercheurs et les organisations internationales pour des questions d’ordre expérimental."
+  },
+  {
+    "objectID": "doc/context1.html#impact-environnemental-et-sociétal",
+    "href": "doc/context1.html#impact-environnemental-et-sociétal",
+    "title": "Contexte et justification du projet",
+    "section": "9 Impact environnemental et sociétal",
+    "text": "9 Impact environnemental et sociétal\n[ ] Au niveau environnemental, le projet permettra de :\n\nRéduire l’impact sur la dégradation des sols : Grâce à cette technologie, le recours aux produits chimiques sera progressivement éradiqué, réduisant ainsi son effet d’appauvrissement du sol. En évitant une utilisation excessive d’engrais et de pesticides, les outils d’agriculture de précision peuvent réduire l’impact environnemental de la production agricole tout en améliorant les rendements ;\nLa réduction de la pollution : les déchets issus des activités agricoles ne seront plus entièrement brûlés ou entreposés. Ils seront réinvestis dans l’activité pour une utilisation future et rentable. Ainsi, il y aura moins de déchets rejetés dans la nature et donc une réduction significative de la production des gaz à effet de serre qui sont toxiques.\n\n[ ] Au niveau sociétal, il permettra :\n\nSoutien à la sécurité alimentaire : l’utilisation d’engrais naturels permettra la production de produits 100% bio, plus enrichis en teneur pour la plupart des composants nutritifs (vitamines, nutriments,). Cela peut avoir un effet important sur la durée de vie des populations et réduire l’apparition des maladies dues à la sous-alimentation ou les phénomènes de malnutrition ;\nCréation d’emplois : La mise en place d’une entreprise d’agriculture de précision peut créer des emplois pour les locaux dans les domaines de la surveillance des cultures, de l’analyse de données, de la maintenance des équipements, de l’assistance technique mais aussi de la force de travail physique ;\nL’amélioration de la productivité et des rendements : en utilisant les technologies d’agriculture de précision pour surveiller les cultures, les agriculteurs peuvent identifier et résoudre rapidement les problèmes tels que les carences en nutriments et les maladies des plantes, améliorer la qualité des récoltes et augmenter les rendements.\n\n\n9.1 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/context2.html#autour-de-la-journée",
+    "href": "doc/context2.html#autour-de-la-journée",
+    "title": "Contexte et justification du projet",
+    "section": "",
+    "text": "La semaine du 11 au 16 mars 2024 a été marquée par la SEMAINE DE LA FILLE SCIENTIFIQUE. Elle s’est tenue à l’Ecole Nationale Supérieure Polytechnique de Yaoundé (ENSPY). Son thème: “Scientifique et Leader, sommes-nous prêts à incarner ce modèle de femme?”.\nCet évenement à été organisée par l’AFENSPY (Association des Filles de l’ENSPY). Elle était dirigée par le Bureau AMAZONE sous le haut Patronage de leurs excellences MINPROFF, MINDHU et MINJEC. Ceci, sous le co-parrainage de Mme la Directrice de la CCA, Mme la Présidente des Entreprises de l’Excellence du Cameroun et M. Le Représentant Résidant de l’IAI Cameroun. Les partenaires de marque étant le UNFPA (Fonds des Nations Unies pour les Activités en matière de Population) et l’OAPI (Organisation Africaine de la Propriété Intellectuelle).\nA l’occasion de cete journée, plusieurs activités étaient au programme, notamment:"
+  },
+  {
+    "objectID": "doc/context2.html#autour-du-concours-du-meilleur-projet-féminin-dinnovation",
+    "href": "doc/context2.html#autour-du-concours-du-meilleur-projet-féminin-dinnovation",
+    "title": "Contexte et justification du projet",
+    "section": "2 Autour du concours du meilleur projet féminin d’innovation",
+    "text": "2 Autour du concours du meilleur projet féminin d’innovation"
   }
 ]
