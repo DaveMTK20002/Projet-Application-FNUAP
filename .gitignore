@@ -19,9 +19,7 @@
 *.rar
 *.tar
 *.zip
-*.xlsx
-*.qmd
-/.quarto/
+
 
 # Logs and databases #
 ######################
@@ -39,5 +37,7 @@
 ehthumbs.db
 Thumbs.db
 
+.xlsx
+.qmd
 /.quarto/
 /_site/
