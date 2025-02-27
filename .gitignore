@@ -37,7 +37,7 @@
 ehthumbs.db
 Thumbs.db
 
-.xlsx
+*.xlsx
 .qmd
 /.quarto/
 /_site/

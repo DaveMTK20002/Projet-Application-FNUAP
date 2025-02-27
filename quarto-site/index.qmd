@@ -10,6 +10,8 @@ format:
 from: markdown+emoji
 ---
 
+![](affiche_appli.jpg)
+
 ## Présentation du projet
 
 - Problématique: La surexploitation du sol posé par le fait que la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité.
