@@ -10,7 +10,7 @@ format:
 from: markdown+emoji
 ---
 
-![](images/solution.png)
+![](doc/images/solution.png)
 
 ## Présentation du projet
 
