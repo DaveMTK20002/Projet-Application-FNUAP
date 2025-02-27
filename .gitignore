@@ -19,6 +19,8 @@
 *.rar
 *.tar
 *.zip
+*.xlsx
+*.quarto
 
 # Logs and databases #
 ######################
