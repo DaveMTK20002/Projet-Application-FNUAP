@@ -20,7 +20,8 @@
 *.tar
 *.zip
 *.xlsx
-*.quarto
+*.qmd
+/.quarto-site/
 
 # Logs and databases #
 ######################
