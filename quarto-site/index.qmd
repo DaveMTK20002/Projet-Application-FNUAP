@@ -10,7 +10,7 @@ format:
 from: markdown+emoji
 ---
 
-![](affiche_appli.jpg)
+![](images/affiche_appli.jpg)
 
 ## Présentation du projet
 
