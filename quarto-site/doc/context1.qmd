@@ -86,12 +86,12 @@ internes ;
 
 ## Impact environnemental et sociétal
 
-[ ] Au niveau environnemental, le projet permettra de :
+- [ ] Au niveau environnemental, le projet permettra de :
 
 - Réduire l’impact sur la dégradation des sols : Grâce à cette technologie, le recours aux produits chimiques sera progressivement éradiqué, réduisant ainsi son effet d’appauvrissement du sol. En évitant une utilisation excessive d'engrais et de pesticides, les outils d'agriculture de précision peuvent réduire l'impact environnemental de la production agricole tout en améliorant les rendements ;
 - La réduction de la pollution : les déchets issus des activités agricoles ne seront plus entièrement brûlés ou entreposés. Ils seront réinvestis dans l’activité pour une utilisation future et rentable. Ainsi, il y aura moins de déchets rejetés dans la nature et donc une réduction significative de la production des gaz à effet de serre qui sont toxiques.
 
-[ ] Au niveau sociétal, il permettra :
+- [ ] Au niveau sociétal, il permettra :
 
 - Soutien à la sécurité alimentaire : l’utilisation d’engrais naturels permettra la production de produits 100% bio, plus enrichis en teneur pour la plupart des composants nutritifs (vitamines, nutriments,). Cela peut avoir un effet important sur la durée de vie des populations et réduire l’apparition des maladies dues à la sous-alimentation ou les phénomènes de malnutrition ;
 - Création d'emplois : La mise en place d'une entreprise d'agriculture de précision peut créer des emplois pour les locaux dans les domaines de la surveillance des cultures, de l'analyse de données, de la maintenance des équipements, de l'assistance technique mais aussi de la force de travail physique ;
@@ -106,19 +106,3 @@ internes ;
 
 
 
-### Premières requêtes GET
-
-- [ ] Lancez le programme **Insomnia**
-  - Icone Windows en bas à gauche > 5-Informatique
-- [ ] Créez une collection de requête 
-    - bouton **Create** à droite
-    - puis cliquez sur votre collection
-- [ ] Créez une nouvelle requête 
-    - en appuyant sur **CTRL+N**
-    - donnez lui un nom 
-    - vérifiez que c'est bien une requête de type **GET**
-
-Dans la barre d'adresse, testez les requêtes des webservices ci-dessous :
-
-- Regardez la réponse dans la partie droite de votre écran
-- Quelles sont les similarités entre les réponses ?
