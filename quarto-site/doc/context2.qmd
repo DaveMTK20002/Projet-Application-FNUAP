@@ -12,7 +12,7 @@ from: markdown+emoji
 number-sections: true
 ---
 
-## Autour de la journée
+## Autour de la semaine de la fille scientifique
 
 La semaine du 11 au 16 mars 2024 a été marquée par la SEMAINE DE LA FILLE SCIENTIFIQUE. Elle s'est tenue à l'Ecole Nationale Supérieure Polytechnique de Yaoundé (ENSPY). Son thème: "Scientifique et Leader, sommes-nous prêts à incarner ce modèle de femme?".
 
@@ -39,3 +39,23 @@ A l'occasion de cette journée, plusieurs activités étaient au programme, et l
 
 
 ## Autour du concours du meilleur projet féminin d'innovation
+
+Comme mentionné ci-dessus, une compétition sur des projets d'innovation agro-technologique a été lancé aux différentes communautés de filles des grandes écoles de la place, à savoir: ENSPY, ISSEA, ENSTP, etc. Il était question de proposer une solution utilisant les avancées technologies technologiques pour identifier et résoudre un problème dans le domaine de l'agri-culture. Il était question de fournir un document fournissant toutes les informations nécessaire pour la compréhension du projet selon un format spécifique [(Découvrir le projet)](doc/context1.qmd)
+
+![](images/concours.jpeg)
+
+Après avoir reçu les soumissions, une pré-sélection des projets a été faite et les finalistes devaient présenter leurs projets devant un jury assermenté. Suite aux différentes présentations, notre projet portant sur **l'IA et Engrais naturels** a été primé. Il y avait deux prix:
+
+- Un prix de l'AFENSPY: le projet a occupé la 3e position, pour une valeur de 1000 $
+
+![Le prix](images/prix1.jpg)
+
+![Le lauréates](images/laureates.jpg)
+
+- Un prix du MINJEC: le projet a occupé la 2e position, pour une valeur de 800 000 FCFA.
+
+
+
+
+
+
