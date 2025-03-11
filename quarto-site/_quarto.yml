@@ -23,14 +23,6 @@ website:
             text: "Présentation de la compétition"
           - href: doc/context3.qmd
             text: "Equipe de développement"
-      - text: Avancement
-        menu:
-          - href: doc/avancee1.qmd
-            text: "Introduction"
-          - href: doc/avancee2.qmd
-            text: "Méthodologie adoptée"
-          - href: doc/avancee3.qmd
-            text: "Deploiement du code"
       - text: Application
         menu:
           - href: doc/application1.qmd
