@@ -16,13 +16,22 @@ engine: python
 ---
 On va tester l'application ici
 
+<style>
+  .widget-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 20px; /* Espace entre les colonnes */
+  }
+</style>
 ```{python}
 
 #| echo: false
 #| eval: true
+
 import ipywidgets as widgets
 from IPython.display import display
 
+# Créer des widgets pour les caractéristiques numériques
 clay_widget = widgets.FloatText(value=0.0, description='Clay (0-30 cm) %:')
 silt_widget = widgets.FloatText(value=0.0, description='Silt (0-30 cm) %:')
 sand_widget = widgets.FloatText(value=0.0, description='Sand (0-30 cm) %:')
@@ -32,56 +41,24 @@ bdod_widget = widgets.FloatText(value=0.0, description='Bulk Density (0-30 cm):'
 cfvo_widget = widgets.FloatText(value=0.0, description='CFVO (0-30 cm) %:')
 
 # Créer des widgets pour les champs Oui/Non
-ble_tendre_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Ble tendre:',
-    value='Non'  # Valeur par défaut
-)
+ble_tendre_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Ble tendre:', value='Non')
+ble_dur_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Ble dur:', value='Non')
+ensilage_mais_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Ensillage de mais:', value='Non')
+orge_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Orge:', value='Non')
+colza_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Colza:', value='Non')
+tournsol_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Tournesol:', value='Non')
+bettrave_a_sucre_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Betterave à sucre:', value='Non')
+vignobles_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Vignobles:', value='Non')
 
-ble_dur_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Ble dur:',
-    value='Non'  # Valeur par défaut
-)
+# Organiser les widgets dans une grille
+widgets_list = [
+    clay_widget, silt_widget, sand_widget, ph_widget, 
+    organic_carbon_widget, bdod_widget, cfvo_widget,
+    ble_tendre_widget, ble_dur_widget, ensilage_mais_widget, 
+    orge_widget, colza_widget, tournsol_widget,
+    bettrave_a_sucre_widget, vignobles_widget
+]
 
-
-ensilage_mais_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Ensillage de mais:',
-    value='Non'  # Valeur par défaut
-)
-
-orge_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Orge:',
-    value='Non'  # Valeur par défaut
-)
-
-colza_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Colza:',
-    value='Non'  # Valeur par défaut
-)
-
-tournsol_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Tournesol:',
-    value='Non'  # Valeur par défaut
-)
-
-bettrave_a_sucre_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Betterave à sucre:',
-    value='Non'  # Valeur par défaut
-)
-
-vignobles_widget = widgets.ToggleButtons(
-    options=['Oui', 'Non'],
-    description='Vignobles:',
-    value='Non'  # Valeur par défaut
-)
-
-# Afficher tous les widgets
-display(clay_widget, silt_widget, sand_widget, ph_widget, organic_carbon_widget, bdod_widget, cfvo_widget)
-display(ble_tendre_widget, ble_dur_widget, ensilage_mais_widget, orge_widget, colza_widget, tournsol_widget, bettrave_a_sucre_widget, vignobles_widget)
+# Afficher les widgets dans un conteneur avec la classe CSS 'widget-container'
+display(widgets.VBox([widgets.HBox(widgets_list[i:i+4]) for i in range(0, len(widgets_list), 4)]))
 ```
