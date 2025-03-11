@@ -61,7 +61,7 @@ visual_xqual_yquant("grain_mais",var_numeriques,data_soil)
 
 variables_retenues_grain_mais=var_numeriques+var_cibles_qual
 data_grain_mais=data_soil[variables_retenues_grain_mais]
-
+print(variables_retenues_grain_mais)
 y_grain_mais=data_grain_mais['grain_mais']
 X_grain_mais=data_grain_mais.drop(['grain_mais'], axis=1)
 
