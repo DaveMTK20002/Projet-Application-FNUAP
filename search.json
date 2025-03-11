@@ -4,7 +4,7 @@
     "href": "doc/application1.html",
     "title": "Autour de l’appication",
     "section": "",
-    "text": "On va tester l’application ici\n\nimport ipywidgets as widgets\nfrom IPython.display import display\n\n# Définir les widgets pour l'interaction\nname_widget = widgets.Text(value='', description='Nom:')\ncategory_widget = widgets.Dropdown(options=['A', 'B', 'C'], description='Catégorie:')\naccept_conditions_widget = widgets.Checkbox(value=False, description='Accepter les conditions')\n\n# Afficher les widgets\ndisplay(name_widget, category_widget, accept_conditions_widget)"
+    "text": "On va tester l’application ici"
   },
   {
     "objectID": "doc/context3.html",
