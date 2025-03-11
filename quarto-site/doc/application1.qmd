@@ -16,7 +16,7 @@ engine: python
 ---
 On va tester l'application ici
 
-```{python}
+```{python echo=false}
 import ipywidgets as widgets
 from IPython.display import display
 
