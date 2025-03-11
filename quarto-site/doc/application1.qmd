@@ -16,18 +16,20 @@ engine: python
 ---
 On va tester l'application ici
 
-<style>
-  .widget-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
-    gap: 20px; /* Espace entre les colonnes */
-  }
-</style>
+
+---
+title: "Formulaire de saisie des caractéristiques du sol"
+format: html
+execute:
+  freeze: true
+  engine: python
+---
+
+## 1. Paramètres physiques du sol
+
+Les caractéristiques physiques du sol
 ```{python}
-
 #| echo: false
-#| eval: true
-
 import ipywidgets as widgets
 from IPython.display import display
 
@@ -40,25 +42,39 @@ organic_carbon_widget = widgets.FloatText(value=0.0, description='Organic Carbon
 bdod_widget = widgets.FloatText(value=0.0, description='Bulk Density (0-30 cm):')
 cfvo_widget = widgets.FloatText(value=0.0, description='CFVO (0-30 cm) %:')
 
-# Créer des widgets pour les champs Oui/Non
+# Organiser les widgets pour les paramètres physiques du sol en 2 colonnes
+physical_widgets = widgets.VBox([
+    widgets.HBox([clay_widget, silt_widget]),
+    widgets.HBox([sand_widget, ph_widget]),
+    widgets.HBox([organic_carbon_widget, bdod_widget]),
+    cfvo_widget
+])
+
+display(physical_widgets)
+```
+La présence d'autres cultures sur le sol
+
+```{python}
+#| echo: false
+# Créer des widgets pour les champs Oui/Non (cultures)
 ble_tendre_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Ble tendre:', value='Non')
 ble_dur_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Ble dur:', value='Non')
 ensilage_mais_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Ensillage de mais:', value='Non')
+
 orge_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Orge:', value='Non')
 colza_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Colza:', value='Non')
 tournsol_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Tournesol:', value='Non')
 bettrave_a_sucre_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Betterave à sucre:', value='Non')
+
 vignobles_widget = widgets.ToggleButtons(options=['Oui', 'Non'], description='Vignobles:', value='Non')
 
-# Organiser les widgets dans une grille
-widgets_list = [
-    clay_widget, silt_widget, sand_widget, ph_widget, 
-    organic_carbon_widget, bdod_widget, cfvo_widget,
-    ble_tendre_widget, ble_dur_widget, ensilage_mais_widget, 
-    orge_widget, colza_widget, tournsol_widget,
-    bettrave_a_sucre_widget, vignobles_widget
-]
+# Organiser les widgets des cultures en 2 colonnes
+crops_widgets = widgets.VBox([
+    widgets.HBox([ble_tendre_widget, ble_dur_widget]),
+    widgets.HBox([vignobles_widget, ensilage_mais_widget]),
+    widgets.HBox([orge_widget, colza_widget]),
+    widgets.HBox([tournsol_widget, bettrave_a_sucre_widget])
+])
 
-# Afficher les widgets dans un conteneur avec la classe CSS 'widget-container'
-display(widgets.VBox([widgets.HBox(widgets_list[i:i+4]) for i in range(0, len(widgets_list), 4)]))
+display(crops_widgets)
 ```
