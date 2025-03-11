@@ -16,7 +16,7 @@ number-sections: true
 
 La semaine du 11 au 16 mars 2024 a été marquée par la SEMAINE DE LA FILLE SCIENTIFIQUE. Elle s'est tenue à l'Ecole Nationale Supérieure Polytechnique de Yaoundé (ENSPY). Son thème: "Scientifique et Leader, sommes-nous prêts à incarner ce modèle de femme?".
 
-Cet évenement à été organisée par l'AFENSPY (Association des Filles de l'ENSPY). Elle était dirigée par le Bureau AMAZONE sous le haut Patronage de leurs excellences MINPROFF, MINDHU et MINJEC. Ceci, sous le co-parrainage de Mme la Directrice de la CCA, Mme la Présidente des Entreprises de l'Excellence du Cameroun et M. Le Représentant Résidant de l'IAI Cameroun. Les partenaires de marque étant le UNFPA (Fonds des Nations Unies pour les Activités en matière de Population) et l'OAPI (Organisation Africaine de la Propriété Intellectuelle).
+Cet évenement à été organisée par l'AFENSPY (Association des Filles de l'ENSPY). Elle était dirigée par le Bureau AMAZONE sous le haut Patronage de leurs Excellences MINPROFF (Ministre de la Promotion de la Femme et de la Famille), MINHDU (Ministre de l'Habitat et du Développement Urbain) et MINJEC (Ministre de la Jeunesse et de l'Education Civique). Ceci, sous le co-parrainage de Mme la Directrice de la CCA, Mme la Présidente des Entreprises de l'Excellence du Cameroun et M. Le Représentant Résidant de l'IAI Cameroun. Les partenaires de marque étant le UNFPA (Fonds des Nations Unies pour les Activités en matière de Population) et l'OAPI (Organisation Africaine de la Propriété Intellectuelle).
 
 
 <figure>
@@ -35,7 +35,7 @@ A l'occasion de cette journée, plusieurs activités étaient au programme, et l
 -**15/03/2024** : Grande Cérémonie de Clôture de la Semaine de la Fille Scientifique présidée par le Ministre de la Jeunesse et de l'Education Civique(MINJEC) accompagné de l'Inspecteur Numéro 1 du Ministère de la Promotion de la Femme et de la Famille(MINPROFF). Nous étions en présence de plusieurs invités de marque comme Mme NNOKO Magui, Directrice a l'OAPI, la représentante de la Directrice Générale de la CCAA, la représentante du Représentant résident de l'IAI Cameroun, etc. Pendant cette cérémonie, on a pu assister à un discours de bienvenue de la part de la Directrice Adjointe de l'ENSPY, un récapitulatif des activités de la semaine par la Présidente de l'AFENSPY et un mot de clôture du Ministre de la Jeunesse et de l'Education Civique sans oublier la remise des prix des deux concours qui ont eu lieu pendant la semaine ;
 - **16/03/2024** : Journée Culturelle de l'ENSPY basée sur le thème : "Retour aux Sources". Une journée dédiée à la célébration de notre magnifique diversité culturelle et linguistique, divisée en 4 aires culturelles et ici représentées.  Entre le climat tropical et les exploits artisanaux de l’aire Soudano-Sahélienne, la forêt dense et le bikutsi de nos frères Fang-Bétis, les kaba splendides et les pas de danses rythmiques des Sawa ; et enfin les saveurs enivrantes et le relief pittoresque de l’aire Grassfield, cette journée a surpassé totalement nos attentes avec un sketch sur le vivre-ensemble et sur le multiculturalisme, des danses et prestations culturelles diverses qui n'ont pas manqué de nous éblouir.
 
-![](images/cloture.jpeg)
+![](images/cloture.jpeg){width=300}
 
 
 ## Autour du concours du meilleur projet féminin d'innovation
@@ -48,9 +48,9 @@ Après avoir reçu les soumissions, une pré-sélection des projets a été fait
 
 - Un prix de l'AFENSPY: le projet a occupé la 3e position, pour une valeur de 1000 $
 
-![Le prix](images/prix1.jpg){width=300}
+![](images/prix1.jpg){width=300}
 
-![Le lauréates](images/laureates.jpg){width=300}
+![](images/laureates.jpg){width=300}
 
 - Un prix du MINJEC: le projet a occupé la 2e position, pour une valeur de 800 000 FCFA.
 
