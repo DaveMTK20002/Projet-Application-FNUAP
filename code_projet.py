@@ -29,6 +29,7 @@ from sklearn.neighbors import KNeighborsClassifier #modèle pour le KNN
 from sklearn.ensemble import VotingClassifier #modèle pour vote des classfiers
 from sklearn import tree #modèle pour arbre de décision avec possibilité de visualisation
 from sklearn.preprocessing import PolynomialFeatures #modèle pour la régression polynomiale
+import joblib #pour sauvegarder les modèles
 
 ##Ma base de données
 data_soil = pd.read_excel('data_clean.xlsx')
@@ -107,6 +108,9 @@ print("Score sur le test",model_grain_mais.score(X_test_grain_mais,y_test_grain_
 #metriques de performance
 matrix_confusion(model_grain_mais,X_test_grain_mais, y_test_grain_mais)
 courbe_roc_AUC(model_grain_mais,X_test_grain_mais, y_test_grain_mais)
+
+print(X_grain_mais.columns)
+#joblib.dump(model_grain_mais, "model_grain_mais.pkl")
 ### Variable ble_tendre
 ### Variable ble_dur
 ### Variable ble_tendre

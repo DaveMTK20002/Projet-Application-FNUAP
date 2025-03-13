@@ -32,6 +32,8 @@ Les caractéristiques physiques du sol
 #| echo: false
 import ipywidgets as widgets
 from IPython.display import display
+import joblib
+import pandas as pd
 
 # Créer des widgets pour les caractéristiques numériques
 clay_widget = widgets.FloatText(value=0.0, description='Clay (0-30 cm) %:')
@@ -77,4 +79,60 @@ crops_widgets = widgets.VBox([
 ])
 
 display(crops_widgets)
+
+# Créer un bouton pour lancer la prédiction
+predict_button = widgets.Button(description="Prédire si le sol est adapté")
+
+# Créer un champ de sortie pour afficher la prédiction
+output_prediction = widgets.Output()
 ```
+
+
+## 2. Prédiction du degré d'daptation du sol considéré
+
+```{python}
+#| echo: false
+# Fonction de prédiction
+def make_prediction(b):
+    with output_prediction:
+        output_prediction.clear_output()  # Effacer l'ancienne prédiction
+
+        # Récupérer les valeurs des widgets
+        nouvelle_observation_dict = {
+            "clay_0to30cm_percent": clay_widget.value,
+            "silt_0to30cm_percent": silt_widget.value,
+            "sand_0to30cm_percent": sand_widget.value,
+            "ph_h2o_0to30cm": ph_widget.value,
+            "organic_carbon_0to30cm_percent": organic_carbon_widget.value,
+            "bdod_0to30cm": bdod_widget.value,
+            "cfvo_0to30cm_percent": cfvo_widget.value,
+            "ble_tendre": 1 if ble_tendre_widget.value == "Oui" else 0,
+            "ble_dur": 1 if ble_dur_widget.value == "Oui" else 0,
+            "ensilage_mais": 1 if ensilage_mais_widget.value == "Oui" else 0,
+            "orge": 1 if orge_widget.value == "Oui" else 0,
+            "colza": 1 if colza_widget.value == "Oui" else 0,
+            "tournsol": 1 if tournsol_widget.value == "Oui" else 0,
+            "bettrave_a_sucre": 1 if bettrave_a_sucre_widget.value == "Oui" else 0,
+            "vignobles": 1 if vignobles_widget.value == "Oui" else 0
+        }
+
+        # Convertir en DataFrame
+        nouvelle_observation = pd.DataFrame([nouvelle_observation_dict])
+
+        # Charger le modèle
+        model_grain_mais = joblib.load("model_grain_mais.pkl")
+
+        # Faire la prédiction
+        prediction = model_grain_mais.predict(nouvelle_observation)
+
+        # Afficher le résultat
+        print(f"Prédiction du rendement du maïs grain : {prediction[0]}")
+
+# Associer la fonction au bouton
+predict_button.on_click(make_prediction)
+
+display(predict_button)  # Bouton de prédiction
+display(output_prediction)  # Champ pour afficher la prédiction
+```
+
+## 3. Prédiction de la superficie cultivable avec ces caratéristiques
