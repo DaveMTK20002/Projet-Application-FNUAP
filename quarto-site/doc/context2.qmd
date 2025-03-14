@@ -14,7 +14,7 @@ number-sections: true
 
 ## Autour de la semaine de la fille scientifique
 
-![](images/les_laureates.jpeg){width=300}
+![](images/les_laureates.jpg){width=300}
 
 La semaine du 11 au 16 mars 2024 a été marquée par la SEMAINE DE LA FILLE SCIENTIFIQUE. Elle s'est tenue à l'Ecole Nationale Supérieure Polytechnique de Yaoundé (ENSPY). Son thème: "Scientifique et Leader, sommes-nous prêts à incarner ce modèle de femme?".
 
@@ -57,8 +57,6 @@ Après avoir reçu les soumissions, une pré-sélection des projets a été fait
 - Un prix du MINJEC: le projet a occupé la 2e position, pour une valeur de 800 000 FCFA.
 
 ![](images/prix_minjec.jpg){width=300}
-
-![](images/parution.jpeg){width=300}
 
 
 

@@ -12,7 +12,7 @@ from: markdown+emoji
 number-sections: true
 ---
 
-![](images/parution.jpeg){width=300}
+![](images/parution.jpg){width=300}
 
 ## Contexte
 

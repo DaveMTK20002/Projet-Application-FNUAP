@@ -35,7 +35,7 @@ Ce projet est à l'initiative de la gent féminine, organisé dans le cadre de l
 
 En savoir plus sur les concepteurs [(Plus sur les concepteurs )](doc/context3.qmd)
 
-![](doc/images/parution.jpeg){width=300}
+![](doc/images/parution.jpg){width=300}
 
 ## Bibliographie
 
