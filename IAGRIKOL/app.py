@@ -4,28 +4,128 @@ import joblib
 
 # Chargement des modèles
 model_grain_mais = joblib.load("model_grain_mais.pkl")
+model_ble_tendre = joblib.load("model_ble_tendre.pkl")
+model_orge = joblib.load("model_orge.pkl")
+model_tournsol = joblib.load("model_tournsol.pkl")
+model_bettrave = joblib.load("model_bettrave.pkl")
 
 
 #Chargement des fonctions utiles
-def make_prediction(nouvelle_observation):
-    # Faire la prédiction avec le modèle
-    prediction = model_grain_mais.predict(nouvelle_observation)
+def make_prediction_grain_mais(nouvelle_observation):
+    prediction = model_grain_mais.predict_proba(nouvelle_observation)
+    probabilite_adapte = prediction[:, 1]  # Probabilité que le sol soit adapté
+
+    seuil = 0.85
+
+    # Si la probabilité de la classe 1 est supérieure au seuil, prédire 1, sinon prédire 0
+    prediction_ajustee = (probabilite_adapte > seuil).astype(int)
+    return (prediction_ajustee[0],probabilite_adapte)
+
+
+
+def make_prediction_grain_mais_num(nouvelle_observation):
+    prediction = model_grain_mais_num.predict_proba(nouvelle_observation)
     return prediction[0]
+
+
+def make_prediction_ble_tendre(nouvelle_observation):
+    prediction = model_ble_tendre.predict_proba(nouvelle_observation)
+    probabilite_adapte = prediction[:, 1]  # Probabilité que le sol soit adapté
+
+    seuil = 0.85
+
+    # Si la probabilité de la classe 1 est supérieure au seuil, prédire 1, sinon prédire 0
+    prediction_ajustee = (probabilite_adapte > seuil).astype(int)
+    return (prediction_ajustee[0],probabilite_adapte)
+
+
+def make_prediction_ble_tendre_num(nouvelle_observation):
+    prediction = model_ble_tendre_num.predict_proba(nouvelle_observation)
+    return prediction[0]
+
+
+def make_prediction_orge(nouvelle_observation):
+    prediction = model_orge.predict_proba(nouvelle_observation)
+    probabilite_adapte = prediction[:, 1]  # Probabilité que le sol soit adapté
+
+    seuil = 0.85
+
+    # Si la probabilité de la classe 1 est supérieure au seuil, prédire 1, sinon prédire 0
+    prediction_ajustee = (probabilite_adapte > seuil).astype(int)
+    return (prediction_ajustee[0],probabilite_adapte)
+
+
+
+def make_prediction_orge_num(nouvelle_observation):
+    prediction = model_orge_num.predict_proba(nouvelle_observation)
+    return prediction[0]
+
+
+def make_prediction_tournsol(nouvelle_observation):
+    prediction = model_tournsol.predict_proba(nouvelle_observation)
+    probabilite_adapte = prediction[:, 1]  # Probabilité que le sol soit adapté
+
+    seuil = 0.85
+
+    # Si la probabilité de la classe 1 est supérieure au seuil, prédire 1, sinon prédire 0
+    prediction_ajustee = (probabilite_adapte > seuil).astype(int)
+    return (prediction_ajustee[0],probabilite_adapte)
+
+
+def make_prediction_tournsol_num(nouvelle_observation):
+    prediction = model_tournsol_num.predict_proba(nouvelle_observation)
+    return prediction[0]
+
+
+
+def make_prediction_bettrave(nouvelle_observation):
+    prediction = model_bettrave.predict_proba(nouvelle_observation)
+    probabilite_adapte = prediction[:, 1]  # Probabilité que le sol soit adapté
+
+    seuil = 0.85
+
+    # Si la probabilité de la classe 1 est supérieure au seuil, prédire 1, sinon prédire 0
+    prediction_ajustee = (probabilite_adapte > seuil).astype(int)
+    return (prediction_ajustee[0],probabilite_adapte)
+
+
+
+def make_prediction_bettrave_num(nouvelle_observation):
+    prediction = model_bettrave_num.predict_proba(nouvelle_observation)
+    return prediction[0]
+
 
 
 st.title("IAGRIKOL🌱") #titre de l'application
 st.sidebar.title("Choisir la culture à prédire") #Création des onglets
-choix = st.sidebar.radio("Sélectionne la culture :", ["Modèle 1", "Modèle 2", "Modèle 3"])
+choix = st.sidebar.radio("Sélectionne la culture :", ["Maïs", "Blé tendre", "Orge","Tournesol","Bettrave à sucre"])
 
-if choix=="Modèle 1":
+if choix=="Blé tendre":
     st.header("Modèle 1")
     st.write("Ici, tu peux insérer le modèle 1")
 
-if choix=="Modèle 2":
+
+
+if choix=="Orge":
+    st.header("Modèle 1")
+    st.write("Ici, tu peux insérer le modèle 1")
+
+
+if choix=="Tournesol":
+    st.header("Modèle 1")
+    st.write("Ici, tu peux insérer le modèle 1")
+
+
+if choix=="Bettrave à sucre":
+    st.header("Modèle 1")
+    st.write("Ici, tu peux insérer le modèle 1")
+
+
+
+if choix=="Maïs":
     # Création de deux colonnes
     col1, col2 = st.columns(2)
 
-# 📌 **Colonne 1 : Saisie des valeurs numériques**
     with col1:
         st.subheader("Paramètres physiques du sol à 30 cm de profondeur")
         clay = st.number_input("Teneur en argile", min_value=0.0, max_value=100.0, value=0.0)
@@ -38,36 +138,30 @@ if choix=="Modèle 2":
     with col2:
         st.subheader("Présence d'autres cultures sur le sol")
         ble_tendre = st.radio("Blé tendre:", ["Oui", "Non"], index=1,horizontal=True)
-        ble_dur = st.radio("Blé dur:", ["Oui", "Non"], index=1,horizontal=True)
         orge = st.radio("Orge:", ["Oui", "Non"], index=1,horizontal=True)
-        colza = st.radio("Colza:", ["Oui", "Non"], index=1,horizontal=True)
-        ensilage_mais = st.radio("Ensilage mais:", ["Oui", "Non"], index=1,horizontal=True)
         tournsol = st.radio("Tournesol:", ["Oui", "Non"], index=1,horizontal=True)
         bettrave_a_sucre = st.radio("Bettrave à sucre:", ["Oui", "Non"], index=1,horizontal=True)
-        vignobles=st.radio("Vignoble:", ["Oui", "Non"], index=1,horizontal=True)
-
     if st.button("Prédire"):
         st.success(f"Valeurs enregistrées ✅\n\nClay: {clay}, pH: {ph}, Blé tendre: {ble_tendre}")
         nouvelle_observation_dict = {
-            "clay_0to30cm_percent": clay,  # Argile (0-30 cm)
-            "silt_0to30cm_percent": silt,  # Limon (0-30 cm)
-            "sand_0to30cm_percent": sand,  # Sable (0-30 cm)
-            "ph_h2o_0to30cm": ph,  # pH (H2O, 0-30 cm)
-            "organic_carbon_0to30cm_percent": organic_carbon,  # Carbone organique (0-30 cm)
-            "bdod_0to30cm": bdod,  # Densité apparente (0-30 cm)
+            "clay_0to30cm_percent": clay, 
+            "silt_0to30cm_percent": silt, 
+            "sand_0to30cm_percent": sand, 
+            "ph_h2o_0to30cm": ph, 
+            "organic_carbon_0to30cm_percent": organic_carbon, 
+            "bdod_0to30cm": bdod, 
             "cfvo_0to30cm_percent": cfvo,
-            "ble_tendre": 1 if ble_tendre == "Oui" else 0,  # Blé tendre
-            "ble_dur": 1 if ble_dur == "Oui" else 0,  # Blé dur
-            "ensilage_mais": 1 if ensilage_mais == "Oui" else 0,  # Ensilage de maïs
-            "orge": 1 if orge == "Oui" else 0,  # Orge
-            "colza": 1 if colza == "Oui" else 0,  # Colza
-            "tournsol": 1 if tournsol == "Oui" else 0,  # Tournesol
-            "bettrave_a_sucre": 1 if bettrave_a_sucre == "Oui" else 0,  # Betterave à sucre
-            "vignobles": 1 if vignobles == "Oui" else 0  # Vignobles
+            "ble_tendre": 1 if ble_tendre == "Oui" else 0, 
+            "orge": 1 if orge == "Oui" else 0, 
+            "tournsol": 1 if tournsol == "Oui" else 0, 
+            "bettrave_a_sucre": 1 if bettrave_a_sucre == "Oui" else 0
         }
         # Convertir en DataFrame
         nouvelle_observation = pd.DataFrame([nouvelle_observation_dict])
     
-        # Prédiction et afficher le résultat
-        prediction = make_prediction(nouvelle_observation)
-        st.write(f"Prédiction du rendement du maïs : {prediction}")
+        # Prédiction et affichage du résultat
+        prediction = make_prediction_grain_mais(nouvelle_observation)
+        if prediction[0]==0:
+            st.write(f"Sol non adapté pour le maïs. Probabilité de non adaptation: {1-prediction[1]}")
+        else: 
+            st.write(f"Sol adapté pour le maïs. Probabilité : {prediction[1]}")

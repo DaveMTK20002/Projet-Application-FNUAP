@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt #pour la visualisation
 import seaborn as sns #pour visualisation
 
 from fonctions_utiles import * #importer les fonctions que j'ai écrites
-
+from imblearn.over_sampling import SMOTE
 
 
 ##Outils pour les modèles
@@ -34,14 +34,10 @@ import joblib #pour sauvegarder les modèles
 ##Ma base de données
 data_soil = pd.read_excel('data_clean.xlsx')
 ##Les variables intéressantes
-var_cibles_quant=['soft_wheat_area_km2', 'hard_wheat_area_km2',
-       'corn_grain_area_km2', 'corn_silage_area_km2', 'barley_area_km2',
-       'rapeseed_area_km2', 'sunflower_area_km2', 'sugarbeet_area_km2',
-       'vineyards_area_km2']
+var_cibles_quant=['soft_wheat_area_km2', 'corn_grain_area_km2', 'barley_area_km2',
+                'sunflower_area_km2', 'sugarbeet_area_km2']
 
-var_cibles_qual=['ble_tendre', 'ble_dur', 'grain_mais',
-       'ensilage_mais', 'orge', 'colza', 'tournsol', 'bettrave_a_sucre',
-       'vignobles']
+var_cibles_qual=['ble_tendre', 'grain_mais', 'orge', 'tournsol', 'bettrave_a_sucre']
 
 var_numeriques=['clay_0to30cm_percent', 'silt_0to30cm_percent', 'sand_0to30cm_percent', 'ph_h2o_0to30cm',
        'organic_carbon_0to30cm_percent', 'bdod_0to30cm',
@@ -62,11 +58,13 @@ visual_xqual_yquant("grain_mais",var_numeriques,data_soil)
 
 variables_retenues_grain_mais=var_numeriques+var_cibles_qual
 data_grain_mais=data_soil[variables_retenues_grain_mais]
-print(variables_retenues_grain_mais)
 y_grain_mais=data_grain_mais['grain_mais']
 X_grain_mais=data_grain_mais.drop(['grain_mais'], axis=1)
 
-X_train_grain_mais, X_test_grain_mais, y_train_grain_mais, y_test_grain_mais = train_test_split(X_grain_mais, y_grain_mais, test_size=0.3, random_state=0)
+X_train_grain_mais, X_test_grain_mais, y_train_grain_mais, y_test_grain_mais = train_test_split(X_grain_mais, y_grain_mais, test_size=0.3, random_state=42)
+
+smote = SMOTE(sampling_strategy="auto", random_state=42)
+X_train_grain_mais_resampled, y_train_grain_mais_resampled = smote.fit_resample(X_train_grain_mais, y_train_grain_mais)
 
 ##Calibrage du modele RandomForest
 mini=10
@@ -88,28 +86,32 @@ params_grid = {'n_estimators': n_estimators,
                'bootstrap': bootstrap
               }
 
-rf_Model = RandomForestClassifier(random_state=42)
+rf_Model = RandomForestClassifier(random_state=42,class_weight="balanced")
 cv = KFold(n_splits=5, shuffle=True, random_state=42)
 rf_grid = GridSearchCV(estimator=rf_Model, param_grid = params_grid, cv=cv)
-#rf_grid.fit(X_train_grain_mais, y_train_grain_mais)
+#rf_grid.fit(X_train_grain_mais_resampled, y_train_grain_mais_resampled)
 
 #print("Meilleurs hyperparametres",rf_grid.best_params_)
 #print("score", rf_grid.best_score_)
+
+
 model_grain_mais = RandomForestClassifier(bootstrap=False,
  criterion='gini',
  max_depth=10,
  max_features='log2',
  min_samples_leaf=2,
  min_samples_split=2,
- n_estimators=20)
-model_grain_mais.fit(X_train_grain_mais,y_train_grain_mais)
+ n_estimators=80,
+ class_weight="balanced")
+model_grain_mais.fit(X_train_grain_mais_resampled,y_train_grain_mais_resampled)
 print("Score sur le test",model_grain_mais.score(X_test_grain_mais,y_test_grain_mais))
 
 #metriques de performance
 matrix_confusion(model_grain_mais,X_test_grain_mais, y_test_grain_mais)
 courbe_roc_AUC(model_grain_mais,X_test_grain_mais, y_test_grain_mais)
 
-print(X_grain_mais.columns)
+
+matrix_confusion(model_grain_mais,X_train_grain_mais_resampled, y_train_grain_mais_resampled)
 #joblib.dump(model_grain_mais, "model_grain_mais.pkl")
 ### Variable ble_tendre
 ### Variable ble_dur
@@ -196,9 +198,6 @@ print(r2_score(test_label,predict))
 poly = PolynomialFeatures(degree = 3)
 X_poly = poly.fit_transform(X_train)
 '''
-
-
-
 
 
 
