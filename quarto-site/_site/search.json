@@ -46,7 +46,7 @@
     "href": "doc/application2.html",
     "title": "Autour de l’application",
     "section": "",
-    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+    "text": "0.1 Problème des données\nUn des principaux défis rencontrés dans ce projet est l’insuffisance des données sur les sols. A la base, l’idée principale était de pouvoir extraire des caractéristiques des sols (ph, teneur en sable, en carbone, etc) à partir d’une imagerie assez nette. Cela devait faire mobiliser plusieurs ressources d’ordres informationnel et informatique. Il a donc été pratiquement été impossible sous contrainte de ressources d’arriver jusque-là. De plus, il était prévu que ces images soient celles prises sur des sols correspondant au territoire Camerounais, puisque l’application est conçue dans ce cadre.\n\n\n0.2 Alternative trouvée\nVue l’insuffisance des données, nous avons opté pour une approche différente. Déjà, nous avons modélisé le caractère d’un sol à être adapté à la plantation d’une certaine culture à partir de l’analyse de ses caractéristiques physiques. On a également inclus les variables liées à la présence d’autres cultures sur le sol pouvant influer sur la plantation de cette culture. Aussi, nous avons considéré des cultures qui sont généralement cultivée au Cameroun (de façon non exhaustive vue la rareté des données au niveau national).\nPour finir, nous avons utilisé une base de données de la France portant sur certaines cultures et les caractéristiques des sols où elles avaient été implantées. Les cultures pertinentes que nous avons retenues pouvant être aussi cultivées au Cameroun sont:\n\nLe mais ;\nLe ble tendre ;\nL’orge ;\nLe bettrave à sucre.\n\nA partir de ces données l’on a pu extraire les informations que l’on a finalement compactées dans un fichier excel qui a constitué notre base final.\nPour plus d’informations sur les données recueillies par la France, aller sur Package R d’extraction des données."
   },
   {
     "objectID": "doc/application2.html#avant-de-commencer",
@@ -67,7 +67,7 @@
     "href": "doc/application1.html",
     "title": "Autour de l’appication",
     "section": "",
-    "text": "On va tester l’application ici\ntitle: “Formulaire de saisie des caractéristiques du sol” format: html execute: freeze: true engine: python"
+    "text": "On va tester l’application ici"
   },
   {
     "objectID": "doc/application1.html#paramètres-physiques-du-sol",
@@ -158,7 +158,7 @@
     "href": "doc/context3.html",
     "title": "Contexte et justification du projet",
     "section": "",
-    "text": "😱 Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.\nIl mélange explications complètes et manipulations pour être au maximum autosuffisant.\nVous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.\n\n\n\n\n\n\nObjectifs\n\n\n\nDans ce TP vous allez :\n\nFaire des appels à un webservice à la main avec Insomnia\nFaire des appels à un webservice avec la bibliothèque python requests\nDécouvrir la page swagger d’un webservice\nManipuler différents formats de données\nCréer un webservice avec le framework python fastAPI"
+    "text": "Ce projet a été l’initiative de deux jeunes étudiantes de l’ISSEA (Institut Sous-régional de Statistique et d’Economie Appliquée). Elles sont présentées tour à tour:\n\nLOUSSINGUI BALENGUISSA Opperine Merveille: Etudiante en 3e année du cycle des Analystes Statisticiens de l’ISSEA. De nationalité Congolaise, elle commence par un baccalauréat C puis satisfait au concours du CASP (Centre d’Appui de la Statistique et de le Plannification). Après avoir obtenu son diplôme (Licence), elle poursuit ses études à l’ISSEA en tant que AS3 et termine cette année (Plus sur Merveille);\nKOKOLO MBOUSSI Reine Vertu: Etudiante en 2e année du cycle des Analystes Statisticiens de l’ISSEA. De nationalité Congolaise également, elle obtient son baccalauréat C au Lycée d’Excellence de Mbounda en 2023. Esnuite, elle satisfait au concours de l’ISSEA où elle suit actuellement une formation en AS2.(Plus sur Reine)"
   },
   {
     "objectID": "doc/context3.html#avant-de-commencer",
@@ -173,5 +173,19 @@
     "title": "Contexte et justification du projet",
     "section": "1 Appeler un webservice à la main",
     "text": "1 Appeler un webservice à la main\nLa première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel Insomnia installé sur votre machine.\n\n1.1 Webservices\n\n\n\n\n\n\nNote\n\n\n\nWebservice : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (article wikipedia).\nDans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (HyperText Transfer Protocol) qui respecte généralement l’architecture REST (REpresentational State Transfer).\nMais il en existe d’autre comme SOAP (Simple Objet- Access Protocol) ou RPC (Remote Procedure Call)\n\n\nEn d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir requêter soit :\n\npour obtenir des ressources\npour modifier les ressources accessibles.\n\nUn webservice peut seulement avoir pour but d’être une point d’accès unique et normalisé à des données (comme une interface à une base de données), mais il peut également être une manière de contrôler un système d’informations (lancer des travaux, les mettre en attente, récupérer des résultats…)\nLes webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.\nPour cela il vous faut :\n\nl’adresse de la ressource, son Uniforme Resource Identifier (URI)\n\nc’est une notion plus générale que les Uniforme Resource Locator (URL)\n\nune méthode (GET, POST, PUT, DELETE, liste des méthodes)\net potentiellement des données\n\n\n\n1.2 Premières requêtes GET\n\nLancez le programme Insomnia\n\nIcone Windows en bas à gauche &gt; 5-Informatique\n\nCréez une collection de requête\n\nbouton Create à droite\npuis cliquez sur votre collection\n\nCréez une nouvelle requête\n\nen appuyant sur CTRL+N\ndonnez lui un nom\nvérifiez que c’est bien une requête de type GET\n\n\nDans la barre d’adresse, testez les requêtes des webservices ci-dessous :\n\nRegardez la réponse dans la partie droite de votre écran\nQuelles sont les similarités entre les réponses ?"
+  },
+  {
+    "objectID": "doc/context3.html#léquipe-des-conceptrices-du-projet",
+    "href": "doc/context3.html#léquipe-des-conceptrices-du-projet",
+    "title": "Contexte et justification du projet",
+    "section": "",
+    "text": "Ce projet a été l’initiative de deux jeunes étudiantes de l’ISSEA (Institut Sous-régional de Statistique et d’Economie Appliquée). Elles sont présentées tour à tour:\n\nLOUSSINGUI BALENGUISSA Opperine Merveille: Etudiante en 3e année du cycle des Analystes Statisticiens de l’ISSEA. De nationalité Congolaise, elle commence par un baccalauréat C puis satisfait au concours du CASP (Centre d’Appui de la Statistique et de le Plannification). Après avoir obtenu son diplôme (Licence), elle poursuit ses études à l’ISSEA en tant que AS3 et termine cette année (Plus sur Merveille);\nKOKOLO MBOUSSI Reine Vertu: Etudiante en 2e année du cycle des Analystes Statisticiens de l’ISSEA. De nationalité Congolaise également, elle obtient son baccalauréat C au Lycée d’Excellence de Mbounda en 2023. Esnuite, elle satisfait au concours de l’ISSEA où elle suit actuellement une formation en AS2.(Plus sur Reine)"
+  },
+  {
+    "objectID": "doc/context3.html#le-développeur",
+    "href": "doc/context3.html#le-développeur",
+    "title": "Contexte et justification du projet",
+    "section": "2 Le développeur",
+    "text": "2 Le développeur\nPour garantir l’efficacité dans la gestion du projet, les conceptrices ont fait appel aux services d’un DataScientist. En effet, ce dernier est un expert dans la manipulation des données, de la modélisation, de la visualisation et du déploiement des applications. Ainsi, elles ont collaboré avec Davick MOUNTEKA. Il s’agit d’un ancien étudiant de l’ISSEA Ingénieur Statisticien Economiste (ISE) qui poursuit ses études en Data Science dans une des grandes écoles d’Ingénieur de France.(Plus sur Davick)"
   }
 ]

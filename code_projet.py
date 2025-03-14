@@ -8,7 +8,7 @@ import seaborn as sns #pour visualisation
 
 from fonctions_utiles import * #importer les fonctions que j'ai écrites
 from imblearn.over_sampling import SMOTE
-
+from sklearn.model_selection import RandomizedSearchCV
 
 ##Outils pour les modèles
 
@@ -53,95 +53,82 @@ correct_outliers(data_soil,var_numeriques)
 
 
 
-### Variable ble_tendre
+### Variable bettrave_a_sucre
 
 #### Visualisation
-visual_xqual_yqual("ble_tendre",var_cibles_qual,data_soil)
-visual_xqual_yquant("ble_tendre",var_numeriques,data_soil)
+visual_xqual_yqual("bettrave_a_sucre",var_cibles_qual,data_soil)
+visual_xqual_yquant("bettrave_a_sucre",var_numeriques,data_soil)
 
 
-variables_retenues_ble_tendre=var_numeriques+var_cibles_qual
-data_ble_tendre=data_soil[variables_retenues_ble_tendre]
-y_ble_tendre=data_ble_tendre['ble_tendre']
-X_ble_tendre=data_ble_tendre.drop(['ble_tendre'], axis=1)
+variables_retenues_bettrave_a_sucre=var_numeriques+var_cibles_qual
+data_bettrave_a_sucre=data_soil[variables_retenues_bettrave_a_sucre]
+y_bettrave_a_sucre=data_bettrave_a_sucre['bettrave_a_sucre']
+X_bettrave_a_sucre=data_bettrave_a_sucre.drop(['bettrave_a_sucre'], axis=1)
 
-X_train_ble_tendre, X_test_ble_tendre, y_train_ble_tendre, y_test_ble_tendre = train_test_split(X_ble_tendre, y_ble_tendre, test_size=0.3, random_state=42)
+X_train_bettrave_a_sucre, X_test_bettrave_a_sucre, y_train_bettrave_a_sucre, y_test_bettrave_a_sucre = train_test_split(X_bettrave_a_sucre, y_bettrave_a_sucre, test_size=0.3, random_state=42)
 """
-smote = SMOTE(sampling_strategy="auto", random_state=42)
-X_train_ble_tendre_resampled, y_train_ble_tendre_resampled = smote.fit_resample(X_train_ble_tendre, y_train_ble_tendre)
-
-##Calibrage du modele RandomForest
-mini=10
-maxi=100
-n_estimators = [int(x) for x in np.linspace(mini, maxi, 10)]
-max_features = ['log2', 'sqrt']
-max_depth = [10,20,30]
-min_samples_split = [2, 5, 10]
-min_samples_leaf = [1, 2, 4]
-criterion = ['gini', 'entropy']
-bootstrap = [True, False]
-
-params_grid = {'n_estimators': n_estimators, 
-               'max_features': max_features,
-               'max_depth': max_depth,
-               'min_samples_split': min_samples_split,
-               'min_samples_leaf': min_samples_leaf,
-               'criterion': criterion,
-               'bootstrap': bootstrap
-              }
-
-rf_Model = RandomForestClassifier(random_state=42,class_weight="balanced")
-cv = KFold(n_splits=5, shuffle=True, random_state=42)
-rf_grid = GridSearchCV(estimator=rf_Model, param_grid = params_grid, cv=cv)
-#rf_grid.fit(X_train_ble_tendre_resampled, y_train_ble_tendre_resampled)
-
-#print("Meilleurs hyperparametres",rf_grid.best_params_)
-#print("score", rf_grid.best_score_)
+count_class_0 = y_train_bettrave_a_sucre.value_counts().min()  # Nombre d'exemples de la classe 0
+count_class_1 = y_train_bettrave_a_sucre.value_counts().max()  # Nombre d'exemples de la classe 1
+scale_pos_weight = count_class_1/count_class_0  # Calcul du scale_pos_weight
+# Initialiser le modèle XGBoost
+model = xgb.XGBClassifier(
+    objective='binary:logistic',
+    eval_metric='logloss',
+    scale_pos_weight=scale_pos_weight  # Appliquer le poids de classe
+)
 
 
-model_ble_tendre = RandomForestClassifier(bootstrap=False,
- criterion='entropy',
- max_depth=10,
- max_features='log2',
- min_samples_leaf=2,
- min_samples_split=5,
- n_estimators=10,
- class_weight="balanced")
-model_ble_tendre.fit(X_train_ble_tendre_resampled,y_train_ble_tendre_resampled)
-print("Score sur le test",model_ble_tendre.score(X_test_ble_tendre,y_test_ble_tendre))
+param_dist = {
+    'n_estimators': [50, 100, 200],
+    'max_depth': [3, 6, 9],
+    'learning_rate': [0.01, 0.1, 0.2],
+    'subsample': [0.7, 0.8, 1.0],
+    'colsample_bytree': [0.7, 0.8, 1.0],
+    'gamma': [0, 0.1, 0.2]
+}
+
+
+random_search = RandomizedSearchCV(estimator=model, param_distributions=param_dist, n_iter=100, cv=5, scoring='accuracy', n_jobs=-1)
+
+# Effectuer la recherche sur les paramètres
+random_search.fit(X_train_bettrave_a_sucre, y_train_bettrave_a_sucre)
+
+print("Meilleurs hyperparametres",random_search.best_params_)
+print("score", random_search.best_score_)
+
+
+model_bettrave_a_sucre = random_search
+print("Score sur le test",model_bettrave_a_sucre.score(X_test_bettrave_a_sucre,y_test_bettrave_a_sucre))
 
 #metriques de performance
-matrix_confusion(model_ble_tendre,X_test_ble_tendre, y_test_ble_tendre)
-courbe_roc_AUC(model_ble_tendre,X_test_ble_tendre, y_test_ble_tendre)
+matrix_confusion(model_bettrave_a_sucre,X_test_bettrave_a_sucre, y_test_bettrave_a_sucre)
+courbe_roc_AUC(model_bettrave_a_sucre,X_test_bettrave_a_sucre, y_test_bettrave_a_sucre)
 
 
-joblib.dump(model_ble_tendre, "model_ble_tendre.pkl")
-
+joblib.dump(model_bettrave_a_sucre, "model_bettrave_a_sucre.pkl")
 """
-#Variable ble_tendre mais numerique
-variables_retenues_ble_tendre_num=var_numeriques+var_cibles_quant
-data_ble_tendre_num=data_soil[variables_retenues_ble_tendre_num]
-y_ble_tendre_num=data_ble_tendre_num["soft_wheat_area_km2"]
-X_ble_tendre_num=data_ble_tendre_num.drop(['soft_wheat_area_km2'], axis=1)
+#Variable bettrave_a_sucre mais numerique
+variables_retenues_bettrave_a_sucre_num=var_numeriques+var_cibles_quant
+data_bettrave_a_sucre_num=data_soil[variables_retenues_bettrave_a_sucre_num]
+y_bettrave_a_sucre_num=data_bettrave_a_sucre_num["sugarbeet_area_km2"]
+X_bettrave_a_sucre_num=data_bettrave_a_sucre_num.drop(['sugarbeet_area_km2'], axis=1)
 
-X_train_ble_tendre_num, X_test_ble_tendre_num, y_train_ble_tendre_num, y_test_ble_tendre_num = train_test_split(X_ble_tendre_num, y_ble_tendre_num, test_size=0.3, random_state=42)
+X_train_bettrave_a_sucre_num, X_test_bettrave_a_sucre_num, y_train_bettrave_a_sucre_num, y_test_bettrave_a_sucre_num = train_test_split(X_bettrave_a_sucre_num, y_bettrave_a_sucre_num, test_size=0.3, random_state=42)
 
 
 ##Regression XGBoost
 xgboost_mais_num= xgb.XGBRegressor(objective='reg:squarederror', eval_metric='rmse')
-xgboost_mais_num.fit(X_train_ble_tendre_num,y_train_ble_tendre_num)
-y_pred_ble_tendre_num_xg=xgboost_mais_num.predict(X_test_ble_tendre_num)
-rr=r2_score(y_test_ble_tendre_num, y_pred_ble_tendre_num_xg)
+xgboost_mais_num.fit(X_train_bettrave_a_sucre_num,y_train_bettrave_a_sucre_num)
+y_pred_bettrave_a_sucre_num_xg=xgboost_mais_num.predict(X_test_bettrave_a_sucre_num)
+rr=r2_score(y_test_bettrave_a_sucre_num, y_pred_bettrave_a_sucre_num_xg)
 print("R2 avec xg",rr)
-joblib.dump(xgboost_mais_num, "model_ble_tendre_num.pkl")
+joblib.dump(xgboost_mais_num, "model_bettrave_a_sucre_num.pkl")
+print(X_test_bettrave_a_sucre_num.columns)
 
-
-### Variable ble_tendre
-### Variable orge
+### Variable bettrave_a_sucre
+### Variable bettrave_a_sucre
 ### Variable tournsol
 ### Variable bettrave à sucre
-
-
 """
 Vote_Model = VotingClassifier([('SGD', model_1), 
                             ('Tree', model_2),
@@ -192,8 +179,5 @@ print(r2_score(test_label,predict))
 poly = PolynomialFeatures(degree = 3)
 X_poly = poly.fit_transform(X_train)
 """
-
-
-
 
 
