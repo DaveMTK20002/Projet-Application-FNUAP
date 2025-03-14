@@ -91,18 +91,11 @@
     "text": "Bibliographie\n\ngithub vers le code du projet\nPackage R d’extraction des données\nAnnuaire Statistique du Cameroun, INS Cameroun (2019)."
   },
   {
-    "objectID": "doc/context1.html",
-    "href": "doc/context1.html",
-    "title": "Contexte et justification du projet",
-    "section": "",
-    "text": "L’agriculture représente un secteur capital dans les économies des pays Africains. En effet, le secteur agricole en Afrique sub-saharienne représente une part importante de la richesse nationale, entre 20 et 50% selon les pays et est porteur de nombreux emplois.\nCependant, ce secteur souffre de beaucoup d’insuffisances. Il reste peu capitalisé et encore fortement orienté vers l’agriculture de subsistance et caractérisé par des rendements faibles.\n\nPourtant, l’agriculture doit permettre de nourrir une population de plus en plus importante (les projections démographiques prévoient une population supérieure à 9 milliards d’individus d’ici à 2050), dans un contexte de tension sur les ressources naturelles (notamment la disponibilité des terres agricoles) et d’une nécessaire réduction de l’empreinte environnementale de l’agriculture. Cela suppose une intensification de la production agricole, tout en limitant/réduisant ses impacts sur l’environnement, notamment sur la dégradation des sols. C’est « l’intensification durable », reconnu et promu sur le plan international (FAO), qui devrait être en mesure de répondre à ce défi."
-  },
-  {
     "objectID": "doc/context1.html#contexte",
     "href": "doc/context1.html#contexte",
     "title": "Contexte et justification du projet",
-    "section": "",
-    "text": "L’agriculture représente un secteur capital dans les économies des pays Africains. En effet, le secteur agricole en Afrique sub-saharienne représente une part importante de la richesse nationale, entre 20 et 50% selon les pays et est porteur de nombreux emplois.\nCependant, ce secteur souffre de beaucoup d’insuffisances. Il reste peu capitalisé et encore fortement orienté vers l’agriculture de subsistance et caractérisé par des rendements faibles.\n\nPourtant, l’agriculture doit permettre de nourrir une population de plus en plus importante (les projections démographiques prévoient une population supérieure à 9 milliards d’individus d’ici à 2050), dans un contexte de tension sur les ressources naturelles (notamment la disponibilité des terres agricoles) et d’une nécessaire réduction de l’empreinte environnementale de l’agriculture. Cela suppose une intensification de la production agricole, tout en limitant/réduisant ses impacts sur l’environnement, notamment sur la dégradation des sols. C’est « l’intensification durable », reconnu et promu sur le plan international (FAO), qui devrait être en mesure de répondre à ce défi."
+    "section": "1 Contexte",
+    "text": "1 Contexte\nL’agriculture représente un secteur capital dans les économies des pays Africains. En effet, le secteur agricole en Afrique sub-saharienne représente une part importante de la richesse nationale, entre 20 et 50% selon les pays et est porteur de nombreux emplois.\nCependant, ce secteur souffre de beaucoup d’insuffisances. Il reste peu capitalisé et encore fortement orienté vers l’agriculture de subsistance et caractérisé par des rendements faibles.\n\nPourtant, l’agriculture doit permettre de nourrir une population de plus en plus importante (les projections démographiques prévoient une population supérieure à 9 milliards d’individus d’ici à 2050), dans un contexte de tension sur les ressources naturelles (notamment la disponibilité des terres agricoles) et d’une nécessaire réduction de l’empreinte environnementale de l’agriculture. Cela suppose une intensification de la production agricole, tout en limitant/réduisant ses impacts sur l’environnement, notamment sur la dégradation des sols. C’est « l’intensification durable », reconnu et promu sur le plan international (FAO), qui devrait être en mesure de répondre à ce défi."
   },
   {
     "objectID": "doc/context1.html#problème-à-résoudre-et-conséquences-du-problème",
