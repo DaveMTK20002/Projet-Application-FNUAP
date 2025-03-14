@@ -12,15 +12,18 @@ from imblearn.over_sampling import SMOTE
 
 ##Outils pour les modèles
 
+import xgboost as xgb
 from sklearn.model_selection import train_test_split #séparation des bases en train et test
 from sklearn import metrics
 from sklearn.metrics import roc_curve, classification_report, r2_score, confusion_matrix, accuracy_score #pour les métriques de performance
 from sklearn.model_selection import KFold, ShuffleSplit, StratifiedKFold, cross_val_score #pour la validation croisée
 from sklearn.model_selection import GridSearchCV #pour la recherche des meilleurs hyperparamètres
 from yellowbrick.model_selection import ValidationCurve #visualisation de la validation
+from sklearn.metrics import mean_squared_error
+from sklearn.linear_model import RidgeCV
+
 
 ##Modules pour les modèles
-from sklearn.linear_model import SGDClassifier #classificatin par gradient stochastique
 from sklearn.linear_model import LogisticRegression #modèle de régression logistique
 from sklearn.linear_model import LinearRegression #modèle de régression linéaire
 from sklearn.tree import DecisionTreeClassifier #modèle d'arbre de décision
@@ -37,34 +40,35 @@ data_soil = pd.read_excel('data_clean.xlsx')
 var_cibles_quant=['soft_wheat_area_km2', 'corn_grain_area_km2', 'barley_area_km2',
                 'sunflower_area_km2', 'sugarbeet_area_km2']
 
-var_cibles_qual=['ble_tendre', 'grain_mais', 'orge', 'tournsol', 'bettrave_a_sucre']
+var_cibles_qual=['grain_mais', 'ble_tendre', 'orge', 'tournsol', 'bettrave_a_sucre']
 
 var_numeriques=['clay_0to30cm_percent', 'silt_0to30cm_percent', 'sand_0to30cm_percent', 'ph_h2o_0to30cm',
        'organic_carbon_0to30cm_percent', 'bdod_0to30cm',
        'cfvo_0to30cm_percent']
 
 ##Traitement des variables quantitatives
-boxplot(data_soil,var_numeriques)
+#boxplot(data_soil,var_numeriques)
 correct_outliers(data_soil,var_numeriques)
-boxplot(data_soil,var_numeriques)
+#boxplot(data_soil,var_numeriques)
 
 
 
-### Variable grain_mais
+### Variable ble_tendre
 
 #### Visualisation
-visual_xqual_yqual("grain_mais",var_cibles_qual,data_soil)
-visual_xqual_yquant("grain_mais",var_numeriques,data_soil)
+visual_xqual_yqual("ble_tendre",var_cibles_qual,data_soil)
+visual_xqual_yquant("ble_tendre",var_numeriques,data_soil)
 
-variables_retenues_grain_mais=var_numeriques+var_cibles_qual
-data_grain_mais=data_soil[variables_retenues_grain_mais]
-y_grain_mais=data_grain_mais['grain_mais']
-X_grain_mais=data_grain_mais.drop(['grain_mais'], axis=1)
 
-X_train_grain_mais, X_test_grain_mais, y_train_grain_mais, y_test_grain_mais = train_test_split(X_grain_mais, y_grain_mais, test_size=0.3, random_state=42)
+variables_retenues_ble_tendre=var_numeriques+var_cibles_qual
+data_ble_tendre=data_soil[variables_retenues_ble_tendre]
+y_ble_tendre=data_ble_tendre['ble_tendre']
+X_ble_tendre=data_ble_tendre.drop(['ble_tendre'], axis=1)
 
+X_train_ble_tendre, X_test_ble_tendre, y_train_ble_tendre, y_test_ble_tendre = train_test_split(X_ble_tendre, y_ble_tendre, test_size=0.3, random_state=42)
+"""
 smote = SMOTE(sampling_strategy="auto", random_state=42)
-X_train_grain_mais_resampled, y_train_grain_mais_resampled = smote.fit_resample(X_train_grain_mais, y_train_grain_mais)
+X_train_ble_tendre_resampled, y_train_ble_tendre_resampled = smote.fit_resample(X_train_ble_tendre, y_train_ble_tendre)
 
 ##Calibrage du modele RandomForest
 mini=10
@@ -89,39 +93,56 @@ params_grid = {'n_estimators': n_estimators,
 rf_Model = RandomForestClassifier(random_state=42,class_weight="balanced")
 cv = KFold(n_splits=5, shuffle=True, random_state=42)
 rf_grid = GridSearchCV(estimator=rf_Model, param_grid = params_grid, cv=cv)
-#rf_grid.fit(X_train_grain_mais_resampled, y_train_grain_mais_resampled)
+#rf_grid.fit(X_train_ble_tendre_resampled, y_train_ble_tendre_resampled)
 
 #print("Meilleurs hyperparametres",rf_grid.best_params_)
 #print("score", rf_grid.best_score_)
 
 
-model_grain_mais = RandomForestClassifier(bootstrap=False,
- criterion='gini',
+model_ble_tendre = RandomForestClassifier(bootstrap=False,
+ criterion='entropy',
  max_depth=10,
  max_features='log2',
  min_samples_leaf=2,
- min_samples_split=2,
- n_estimators=80,
+ min_samples_split=5,
+ n_estimators=10,
  class_weight="balanced")
-model_grain_mais.fit(X_train_grain_mais_resampled,y_train_grain_mais_resampled)
-print("Score sur le test",model_grain_mais.score(X_test_grain_mais,y_test_grain_mais))
+model_ble_tendre.fit(X_train_ble_tendre_resampled,y_train_ble_tendre_resampled)
+print("Score sur le test",model_ble_tendre.score(X_test_ble_tendre,y_test_ble_tendre))
 
 #metriques de performance
-matrix_confusion(model_grain_mais,X_test_grain_mais, y_test_grain_mais)
-courbe_roc_AUC(model_grain_mais,X_test_grain_mais, y_test_grain_mais)
+matrix_confusion(model_ble_tendre,X_test_ble_tendre, y_test_ble_tendre)
+courbe_roc_AUC(model_ble_tendre,X_test_ble_tendre, y_test_ble_tendre)
 
 
-matrix_confusion(model_grain_mais,X_train_grain_mais_resampled, y_train_grain_mais_resampled)
-#joblib.dump(model_grain_mais, "model_grain_mais.pkl")
+joblib.dump(model_ble_tendre, "model_ble_tendre.pkl")
+
+"""
+#Variable ble_tendre mais numerique
+variables_retenues_ble_tendre_num=var_numeriques+var_cibles_quant
+data_ble_tendre_num=data_soil[variables_retenues_ble_tendre_num]
+y_ble_tendre_num=data_ble_tendre_num["soft_wheat_area_km2"]
+X_ble_tendre_num=data_ble_tendre_num.drop(['soft_wheat_area_km2'], axis=1)
+
+X_train_ble_tendre_num, X_test_ble_tendre_num, y_train_ble_tendre_num, y_test_ble_tendre_num = train_test_split(X_ble_tendre_num, y_ble_tendre_num, test_size=0.3, random_state=42)
+
+
+##Regression XGBoost
+xgboost_mais_num= xgb.XGBRegressor(objective='reg:squarederror', eval_metric='rmse')
+xgboost_mais_num.fit(X_train_ble_tendre_num,y_train_ble_tendre_num)
+y_pred_ble_tendre_num_xg=xgboost_mais_num.predict(X_test_ble_tendre_num)
+rr=r2_score(y_test_ble_tendre_num, y_pred_ble_tendre_num_xg)
+print("R2 avec xg",rr)
+joblib.dump(xgboost_mais_num, "model_ble_tendre_num.pkl")
+
+
 ### Variable ble_tendre
-### Variable ble_dur
-### Variable ble_tendre
-
-## Variable ensilage_mais
-
-'''
+### Variable orge
+### Variable tournsol
+### Variable bettrave à sucre
 
 
+"""
 Vote_Model = VotingClassifier([('SGD', model_1), 
                             ('Tree', model_2),
                             ('KNN', model_3)],
@@ -139,18 +160,6 @@ tree.plot_tree(Model)
 
 
 
-#KFOLDS
-cval = KFold(7)
-cval = LeaveOneOut()
-cval = ShuffleSplit(5, test_size=0.25)
-cval=StratifiedKFold()
-cross_val_score(tree.DecisionTreeClassifier(), X_train, y_train, cv=cval)
-
-#ROC ET AUC
-#AUC Calculation
-Modl = tree.DecisionTreeClassifier().fit(X_train, y_train)
-
-
 
 
 
@@ -160,21 +169,6 @@ Model.fit(X_train, Y_train)
 
 print('Test score', Model.score(X_test, Y_test))
 
-val_score=[]
-for k in range (1, 50):#On fait varier l'hyperparamètre n_neighbors de 1 à 49
-    score=cross_val_score(KNeighborsClassifier(n_neighbors=k), X_train, Y_train, cv=5, scoring='accuracy').mean()
-    val_score.append(score)
-plt.plot(val_score)
-
-
-viz = ValidationCurve(
-    KNeighborsClassifier(), param_name="n_neighbors",
-    param_range=np.arange(1,50), cv=10, scoring="r2"
-)
-
-# Fit and show the visualizer
-viz.fit(X_train, Y_train)
-viz.show()
 
 ###REGRESSION LOGISTIC
 model1 = LogisticRegression()
@@ -197,11 +191,7 @@ print(r2_score(test_label,predict))
 #POLYNOMIAL REGRESSION
 poly = PolynomialFeatures(degree = 3)
 X_poly = poly.fit_transform(X_train)
-'''
-
-
-
-
+"""
 
 
 

@@ -4,10 +4,15 @@ import joblib
 
 # Chargement des modèles
 model_grain_mais = joblib.load("model_grain_mais.pkl")
+model_grain_mais_num = joblib.load("model_grain_mais_num.pkl")
 model_ble_tendre = joblib.load("model_ble_tendre.pkl")
-model_orge = joblib.load("model_orge.pkl")
-model_tournsol = joblib.load("model_tournsol.pkl")
-model_bettrave = joblib.load("model_bettrave.pkl")
+model_ble_tendre_num = joblib.load("model_ble_tendre_num.pkl")
+#model_orge = joblib.load("model_orge.pkl")
+#model_orge_num = joblib.load("model_orge_num.pkl")
+#model_tournsol = joblib.load("model_tournsol.pkl")
+#model_tournsol_num = joblib.load("model_tournsol_num.pkl")
+#model_bettrave = joblib.load("model_bettrave.pkl")
+#model_bettrave_num = joblib.load("model_bettrave_num.pkl")
 
 
 #Chargement des fonctions utiles
@@ -24,7 +29,7 @@ def make_prediction_grain_mais(nouvelle_observation):
 
 
 def make_prediction_grain_mais_num(nouvelle_observation):
-    prediction = model_grain_mais_num.predict_proba(nouvelle_observation)
+    prediction = model_grain_mais_num.predict(nouvelle_observation)
     return prediction[0]
 
 
@@ -40,7 +45,7 @@ def make_prediction_ble_tendre(nouvelle_observation):
 
 
 def make_prediction_ble_tendre_num(nouvelle_observation):
-    prediction = model_ble_tendre_num.predict_proba(nouvelle_observation)
+    prediction = model_ble_tendre_num.predict(nouvelle_observation)
     return prediction[0]
 
 
@@ -57,7 +62,7 @@ def make_prediction_orge(nouvelle_observation):
 
 
 def make_prediction_orge_num(nouvelle_observation):
-    prediction = model_orge_num.predict_proba(nouvelle_observation)
+    prediction = model_orge_num.predict(nouvelle_observation)
     return prediction[0]
 
 
@@ -73,7 +78,7 @@ def make_prediction_tournsol(nouvelle_observation):
 
 
 def make_prediction_tournsol_num(nouvelle_observation):
-    prediction = model_tournsol_num.predict_proba(nouvelle_observation)
+    prediction = model_tournsol_num.predict(nouvelle_observation)
     return prediction[0]
 
 
@@ -91,7 +96,7 @@ def make_prediction_bettrave(nouvelle_observation):
 
 
 def make_prediction_bettrave_num(nouvelle_observation):
-    prediction = model_bettrave_num.predict_proba(nouvelle_observation)
+    prediction = model_bettrave_num.predict(nouvelle_observation)
     return prediction[0]
 
 
@@ -101,28 +106,34 @@ st.sidebar.title("Choisir la culture à prédire") #Création des onglets
 choix = st.sidebar.radio("Sélectionne la culture :", ["Maïs", "Blé tendre", "Orge","Tournesol","Bettrave à sucre"])
 
 if choix=="Blé tendre":
-    st.header("Modèle 1")
-    st.write("Ici, tu peux insérer le modèle 1")
+    st.header("Blé tendre")
+    st.write("Entrez les caractéristiques du sol. Ensuite, validez avec le bouton Prédire.\nL'algorithme va estimer si ce sol est adpaté à la culture du Blé tendre ou pas.\nSi c'est le cas, l'algorithme pourra également estimer les rendements esomptés")
+    
 
 
 
 if choix=="Orge":
-    st.header("Modèle 1")
-    st.write("Ici, tu peux insérer le modèle 1")
+    st.header("Orge")
+    st.write("Entrez les caractéristiques du sol. Ensuite, validez avec le bouton Prédire.\nL'algorithme va estimer si ce sol est adpaté à la culture de l'Orge ou pas.\nSi c'est le cas, l'algorithme pourra également estimer les rendements esomptés")
+    
 
 
 if choix=="Tournesol":
-    st.header("Modèle 1")
-    st.write("Ici, tu peux insérer le modèle 1")
+    st.header("Tournesol")
+    st.write("Entrez les caractéristiques du sol. Ensuite, validez avec le bouton Prédire.\nL'algorithme va estimer si ce sol est adpaté à la culture du Tournesol ou pas.\nSi c'est le cas, l'algorithme pourra également estimer les rendements esomptés")
+    
 
 
 if choix=="Bettrave à sucre":
-    st.header("Modèle 1")
-    st.write("Ici, tu peux insérer le modèle 1")
+    st.header("Bettrave à sucre")
+    st.write("Entrez les caractéristiques du sol. Ensuite, validez avec le bouton Prédire.\nL'algorithme va estimer si ce sol est adpaté à la culture de la Bettrave à sucre ou pas.\nSi c'est le cas, l'algorithme pourra également estimer les rendements esomptés")
+    
 
 
 
 if choix=="Maïs":
+    st.header("Maïs")
+    st.write("Entrez les caractéristiques du sol. Ensuite, validez avec le bouton Prédire.\nL'algorithme va estimer si ce sol est adpaté à la culture du mais ou pas.\nSi c'est le cas, l'algorithme pourra également estimer les rendements esomptés")
     # Création de deux colonnes
     col1, col2 = st.columns(2)
 
@@ -165,3 +176,27 @@ if choix=="Maïs":
             st.write(f"Sol non adapté pour le maïs. Probabilité de non adaptation: {1-prediction[1]}")
         else: 
             st.write(f"Sol adapté pour le maïs. Probabilité : {prediction[1]}")
+
+            st.subheader("Superficie plantée pour autres cultures (en km2)")
+            soft_wheat_area_km2=st.number_input("Ble tendre", min_value=0.0, value=0.0)
+            barley_area_km2=st.number_input("Orge", min_value=0.0, value=0.0)
+            sunflower_area_km2=st.number_input("Tournsol", min_value=0.0, value=0.0)
+            sugarbeet_area_km2=st.number_input("Bettrave à sucre", min_value=0.0, value=0.0)
+            
+            nouvelle_observation_dict_num = {
+            "clay_0to30cm_percent": clay, 
+            "silt_0to30cm_percent": silt, 
+            "sand_0to30cm_percent": sand, 
+            "ph_h2o_0to30cm": ph, 
+            "organic_carbon_0to30cm_percent": organic_carbon, 
+            "bdod_0to30cm": bdod, 
+            "cfvo_0to30cm_percent": cfvo,
+            "soft_wheat_area_km2":soft_wheat_area_km2,
+            "barley_area_km2":barley_area_km2,
+            "sunflower_area_km2":sunflower_area_km2,
+            "sugarbeet_area_km2":sugarbeet_area_km2
+            }
+            # Convertir en DataFrame
+            nouvelle_observation_num = pd.DataFrame([nouvelle_observation_dict_num])
+            prediction_num = make_prediction_grain_mais_num(nouvelle_observation_num)
+            st.write(f"Estimation du rendement: {prediction_num[0]}")
