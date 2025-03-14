@@ -12,6 +12,8 @@ from: markdown+emoji
 number-sections: true
 ---
 
+![](images/parution.jpeg){width=300}
+
 ## Contexte
 
 L’agriculture représente un secteur capital dans les économies des pays Africains. En effet, **le secteur agricole en Afrique sub-saharienne représente une part importante de la richesse nationale, entre 20 et 50% selon les pays et est porteur de nombreux emplois.**

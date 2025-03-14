@@ -25,7 +25,7 @@ website:
             text: "Equipe de développement"
       - text: Application
         menu:
-          - href: doc/application1.qmd
+          - href: https://eq4nxz3fiw9xiyxkdcy3bz.streamlit.app/
             text: "Tester l'application"
           - href: doc/application2.qmd
             text: "Source de données"

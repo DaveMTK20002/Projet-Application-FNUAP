@@ -18,7 +18,7 @@ from: markdown+emoji
 - **Solution proposée** : Grâce à IAGRIKOL, il est possible d'analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements. On pourra ainsi pour chaque culture l'ensemencer dans une terre propice à sa plantation.
 - **Avantage clé** : Facilité d'utilisation, rapidité, et précision grâce à des algorithmes avancés de machine learning.
 - [Découvrir le projet](doc/context1.qmd)
-- [Tester l'application](doc/application1.qmd)
+- [Tester l'application](https://eq4nxz3fiw9xiyxkdcy3bz.streamlit.app/)
 
 
 ## Equipe de conception
@@ -35,7 +35,7 @@ Ce projet est à l'initiative de la gent féminine, organisé dans le cadre de l
 
 En savoir plus sur les concepteurs [(Plus sur les concepteurs )](doc/context3.qmd)
 
-
+![](doc/images/parution.jpeg){width=300}
 
 ## Bibliographie
 
