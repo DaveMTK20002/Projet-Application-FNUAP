@@ -14,16 +14,8 @@ execute:
   freeze: true
 engine: python
 ---
+
 On va tester l'application ici
-
-
----
-title: "Formulaire de saisie des caractéristiques du sol"
-format: html
-execute:
-  freeze: true
-  engine: python
----
 
 ## 1. Paramètres physiques du sol
 
@@ -81,7 +73,7 @@ crops_widgets = widgets.VBox([
 display(crops_widgets)
 
 # Créer un bouton pour lancer la prédiction
-predict_button = widgets.Button(description="Prédire si le sol est adapté")
+predict_button = widgets.Button(description="Prédire")
 
 # Créer un champ de sortie pour afficher la prédiction
 output_prediction = widgets.Output()

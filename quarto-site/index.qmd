@@ -14,9 +14,9 @@ from: markdown+emoji
 
 ## Présentation du projet
 
-- Problématique: La surexploitation du sol posé par le fait que la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité.
-- Solution proposée : Grâce à IAGRIKOL, il est possible d'analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements. On pourra ainsi pour chaque culture l'ensemencer dans une terre propice à sa plantation.
-- Avantage clé : Facilité d'utilisation, rapidité, et précision grâce à des algorithmes avancés de machine learning.
+- **Problématique**: La surexploitation du sol posé par le fait que la plupart des agriculteurs ne planifient pas leurs intervalles de plantation, ou alors ne font pas des études sur la qualité du sol ou sur son état en termes de productivité.
+- **Solution proposée** : Grâce à IAGRIKOL, il est possible d'analyser rapidement les caractéristiques du sol pour éviter la surexploitation et accroitre les rendements. On pourra ainsi pour chaque culture l'ensemencer dans une terre propice à sa plantation.
+- **Avantage clé** : Facilité d'utilisation, rapidité, et précision grâce à des algorithmes avancés de machine learning.
 - [Découvrir le projet](doc/context1.qmd)
 - [Tester l'application](doc/application1.qmd)
 
