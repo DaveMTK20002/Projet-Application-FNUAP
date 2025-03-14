@@ -159,12 +159,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#avant-de-commencer" id="toc-avant-de-commencer" class="nav-link active" data-scroll-target="#avant-de-commencer">Avant de commencer</a></li>
-  <li><a href="#appeler-un-webservice-à-la-main" id="toc-appeler-un-webservice-à-la-main" class="nav-link" data-scroll-target="#appeler-un-webservice-à-la-main"><span class="header-section-number">1</span> Appeler un webservice à la main</a>
-  <ul class="collapse">
-  <li><a href="#webservices" id="toc-webservices" class="nav-link" data-scroll-target="#webservices"><span class="header-section-number">1.1</span> Webservices</a></li>
-  <li><a href="#premières-requêtes-get" id="toc-premières-requêtes-get" class="nav-link" data-scroll-target="#premières-requêtes-get"><span class="header-section-number">1.2</span> Premières requêtes GET</a></li>
-  </ul></li>
+  <li><a href="#problème-des-données" id="toc-problème-des-données" class="nav-link active" data-scroll-target="#problème-des-données"><span class="header-section-number">0.1</span> Problème des données</a></li>
+  <li><a href="#alternative-trouvée" id="toc-alternative-trouvée" class="nav-link" data-scroll-target="#alternative-trouvée"><span class="header-section-number">0.2</span> Alternative trouvée</a></li>
   </ul>
 </nav>
 </nav>
@@ -205,96 +201,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="avant-de-commencer" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="avant-de-commencer">Avant de commencer</h2>
-<p><span class="emoji" data-emoji="scream">😱</span> Comme vous pouvez le constater, le sujet de ce TP est lui aussi long. Cela ne doit pas vous effrayer.</p>
-<p>Il mélange explications complètes et manipulations pour être au maximum autosuffisant.</p>
-<p><strong>Vous n’allez surement pas terminer le sujet, ce n’est pas grave. Il est là pour vous aider lors du projet informatique.</strong></p>
-<div class="callout callout-style-default callout-note callout-titled" title="Objectifs">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectifs
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Dans ce TP vous allez :</p>
-<ul>
-<li>Faire des appels à un webservice à la main avec <em>Insomnia</em></li>
-<li>Faire des appels à un webservice avec la bibliothèque python <em>requests</em></li>
-<li>Découvrir la page swagger d’un webservice</li>
-<li>Manipuler différents formats de données</li>
-<li>Créer un webservice avec le framework python <em>fastAPI</em></li>
-</ul>
-</div>
-</div>
+<section id="problème-des-données" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="problème-des-données"><span class="header-section-number">0.1</span> Problème des données</h3>
+<p>Un des principaux défis rencontrés dans ce projet est l’insuffisance des données sur les sols. A la base, l’idée principale était de pouvoir extraire des caractéristiques des sols (ph, teneur en sable, en carbone, etc) à partir d’une imagerie assez nette. Cela devait faire mobiliser plusieurs ressources d’ordres informationnel et informatique. Il a donc été pratiquement été impossible sous contrainte de ressources d’arriver jusque-là. De plus, il était prévu que ces images soient celles prises sur des sols correspondant au territoire Camerounais, puisque l’application est conçue dans ce cadre.</p>
 </section>
-<section id="appeler-un-webservice-à-la-main" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="appeler-un-webservice-à-la-main"><span class="header-section-number">1</span> Appeler un webservice à la main</h2>
-<p>La première partie de ce TP ne nécessite pas d’écrire du code, mais seulement de faire des requêtes à un webservice en utilisant le logiciel <a href="https://insomnia.rest/" target="_blank">Insomnia</a> installé sur votre machine.</p>
-<section id="webservices" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="webservices"><span class="header-section-number">1.1</span> Webservices</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Webservice</strong> : le terme webservice est un terme vaste et il serait compliqué d’en donner une définition courte (<a href="https://en.wikipedia.org/wiki/Web_service" target="_blank">article wikipedia</a>).</p>
-<p>Dans le cadre du projet un webservice désigne une application accessible via le protocole HTTP (<strong>H</strong>yper<strong>T</strong>ext <strong>T</strong>ransfer <strong>P</strong>rotocol) qui respecte généralement l’architecture REST (<strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer).</p>
-<p>Mais il en existe d’autre comme SOAP (<strong>S</strong>imple <strong>O</strong>bjet- <strong>A</strong>ccess <strong>P</strong>rotocol) ou RPC (<strong>R</strong>emote <strong>P</strong>rocedure <strong>C</strong>all)</p>
-</div>
-</div>
-<p>En d’autres termes, un webservice est une application accessible via le web que l’on va pouvoir <strong>requêter</strong> soit :</p>
+<section id="alternative-trouvée" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="alternative-trouvée"><span class="header-section-number">0.2</span> Alternative trouvée</h3>
+<p>Vue l’insuffisance des données, nous avons opté pour une approche différente. Déjà, nous avons modélisé le caractère d’un sol à être adapté à la plantation d’une certaine culture à partir de l’analyse de ses caractéristiques physiques. On a également inclus les variables liées à la présence d’autres cultures sur le sol pouvant influer sur la plantation de cette culture. Aussi, nous avons considéré des cultures qui sont généralement cultivée au Cameroun (de façon non exhaustive vue la rareté des données au niveau national).</p>
+<p>Pour finir, nous avons utilisé une base de données de la France portant sur certaines cultures et les caractéristiques des sols où elles avaient été implantées. Les cultures pertinentes que nous avons retenues pouvant être aussi cultivées au Cameroun sont:</p>
 <ul>
-<li>pour obtenir des <strong>ressources</strong></li>
-<li>pour <strong>modifier</strong> les ressources accessibles.</li>
+<li>Le mais ;</li>
+<li>Le ble tendre ;</li>
+<li>L’orge ;</li>
+<li>Le bettrave à sucre.</li>
 </ul>
-<p>Un webservice peut seulement avoir pour but d’être une <strong>point d’accès unique et normalisé</strong> à des données (comme une interface à une base de données), mais il peut également être une <strong>manière de contrôler un système d’informations</strong> (lancer des travaux, les mettre en attente, récupérer des résultats…)</p>
-<p>Les webservices utilisent le protocole HTTP qui est le protocole du web (et pas d’internet). C’est celui que vous utilisez sans le savoir avec votre navigateur web. Requêter un webservice se fait presque comme requêter une page web.</p>
-<p>Pour cela il vous faut :</p>
-<ul>
-<li>l’adresse de la ressource, son <em>Uniforme Resource Identifier</em> (URI)
-<ul>
-<li>c’est une notion plus générale que les <em>Uniforme Resource Locator</em> (URL)</li>
-</ul></li>
-<li>une méthode (GET, POST, PUT, DELETE, <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank">liste des méthodes</a>)</li>
-<li>et potentiellement des données</li>
-</ul>
-</section>
-<section id="premières-requêtes-get" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="premières-requêtes-get"><span class="header-section-number">1.2</span> Premières requêtes GET</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Lancez le programme <strong>Insomnia</strong></label>
-<ul>
-<li>Icone Windows en bas à gauche &gt; 5-Informatique</li>
-</ul></li>
-<li><label><input type="checkbox">Créez une collection de requête</label>
-<ul>
-<li>bouton <strong>Create</strong> à droite</li>
-<li>puis cliquez sur votre collection</li>
-</ul></li>
-<li><label><input type="checkbox">Créez une nouvelle requête</label>
-<ul>
-<li>en appuyant sur <strong>CTRL+N</strong></li>
-<li>donnez lui un nom</li>
-<li>vérifiez que c’est bien une requête de type <strong>GET</strong></li>
-</ul></li>
-</ul>
-<p>Dans la barre d’adresse, testez les requêtes des webservices ci-dessous :</p>
-<ul>
-<li>Regardez la réponse dans la partie droite de votre écran</li>
-<li>Quelles sont les similarités entre les réponses ?</li>
-</ul>
+<p>A partir de ces données l’on a pu extraire les informations que l’on a finalement compactées dans un fichier excel qui a constitué notre base final.</p>
+<p>Pour plus d’informations sur les données recueillies par la France, aller sur <a href="https://github.com/BjnNowak/frex" target="_blank">Package R d’extraction des données</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
