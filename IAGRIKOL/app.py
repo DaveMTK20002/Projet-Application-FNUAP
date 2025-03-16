@@ -147,9 +147,9 @@ if choix=="Blé tendre":
     if st.session_state.get('prediction_done', False):
         prediction = st.session_state['prediction']
         if prediction[0] == 0:
-            st.write(f"Sol non adapté pour le maïs. Probabilité : {1 - prediction[1]}")
+            st.write(f"Sol non adapté pour le blé tendre. Probabilité : {1 - prediction[1]}")
         else:
-            st.success(f"Sol adapté pour le maïs. Probabilité : {prediction[1]}")
+            st.success(f"Sol adapté pour le blé tendre. Probabilité : {prediction[1]}")
 
             # Entrée pour estimer le rendement
             st.subheader("Superficie plantée pour autres cultures (en km²)")
@@ -236,9 +236,9 @@ if choix=="Orge":
     if st.session_state.get('prediction_done', False):
         prediction = st.session_state['prediction']
         if prediction[0] == 0:
-            st.write(f"Sol non adapté pour le maïs. Probabilité : {1 - prediction[1]}")
+            st.write(f"Sol non adapté pour l'orge. Probabilité : {1 - prediction[1]}")
         else:
-            st.success(f"Sol adapté pour le maïs. Probabilité : {prediction[1]}")
+            st.success(f"Sol adapté pour l'orge. Probabilité : {prediction[1]}")
 
             # Entrée pour estimer le rendement
             st.subheader("Superficie plantée pour autres cultures (en km²)")
@@ -326,9 +326,9 @@ if choix=="Bettrave à sucre":
     if st.session_state.get('prediction_done', False):
         prediction = st.session_state['prediction']
         if prediction[0] == 0:
-            st.write(f"Sol non adapté pour le maïs. Probabilité : {1 - prediction[1]}")
+            st.write(f"Sol non adapté pour le bettrave à sucre. Probabilité : {1 - prediction[1]}")
         else:
-            st.success(f"Sol adapté pour le maïs. Probabilité : {prediction[1]}")
+            st.success(f"Sol adapté pour le bettrave à sucre. Probabilité : {prediction[1]}")
 
             # Entrée pour estimer le rendement
             st.subheader("Superficie plantée pour autres cultures (en km²)")
